@@ -280,3 +280,6 @@ set t_8b=^[[48;2;%lu;%lu;%lum
 
 " pythonのパス
 let g:python3_host_prog = $PYENV_PATH
+
+" vim-gitgutterの設定
+set updatetime=100
