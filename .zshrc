@@ -108,3 +108,6 @@ if [[ ${TERM} != "linux" ]]; then
 
     install_powerline_precmd
 fi
+
+# zの設定
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
