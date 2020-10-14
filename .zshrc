@@ -5,8 +5,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# goの設定
+# パスの設定
 export GOPATH=$HOME/go
+export PATH=$HOME/.local/bin:$PATH
 
 # zsh-completions(補完機能)の設定
 if [ -e /usr/local/share/zsh-completions ]; then
@@ -111,3 +112,12 @@ fi
 
 # zの設定
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+# fzfの設定
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
+# alias
+alias vim='nvim'
+alias ls='exa'
