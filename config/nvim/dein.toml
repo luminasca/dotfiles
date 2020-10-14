@@ -6,12 +6,6 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'roxma/nvim-yarp'
-
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-
-[[plugins]]
 repo = 'mileszs/ack.vim'
 
 [[plugins]]
@@ -58,9 +52,6 @@ source ~/.config/nvim/plugins/tweetvim.vim
 
 [[plugins]]
 repo = 'basyura/twibill.vim'
-
-[[plugins]]
-repo = 'cocopon/vaffle.vim'
 
 [[plugins]]
 repo = 'h1mesuke/vim-alignta'
