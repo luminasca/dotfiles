@@ -18,12 +18,6 @@ repo = 'tyru/caw.vim'
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins/denite.vim
-'''
-
-[[plugins]]
 repo = 'vim-scripts/fcitx.vim'
 
 [[plugins]]
