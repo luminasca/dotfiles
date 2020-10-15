@@ -78,25 +78,25 @@ setopt extended_glob
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # Like fish prompt
-source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # 略語の展開
-source $HOME/.zsh/plugins/zsh-abbrev-alias/abbrev-alias.plugin.zsh
+source $HOME/.zsh/zsh-abbrev-alias/abbrev-alias.plugin.zsh
 
 # 実行可能なコマンドに色付け
-source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # 補完機能
-fpath=($HOME/.zsh/plugins/zsh-completions/src $fpath)
+fpath=($HOME/.zsh/zsh-completions/src $fpath)
 
 # 移動強化
-source $HOME/.zsh/plugins/enhancd/init.sh
+source $HOME/.zsh/enhancd/init.sh
 
 # Powerline-goの設定
 if [[ ${TERM} != "linux" ]]; then
     function powerline_precmd() {
-        PS1="$(powerline-go -error $? -shell zsh)"
+        PS1="$(/usr/local/bin/powerline-go -error $? -shell zsh)"
     }
     function install_powerline_precmd() {
         for s in "${precmd_functions[@]}"; do
@@ -114,9 +114,16 @@ fi
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # fzfの設定
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_CTRL_T_COMMAND='rg --files --hidden --glob "!.git/*"'
+export FZF_CTRL_T_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
+function select-history() {
+  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  CURSOR=$#BUFFER
+}
+zle -N select-history
+bindkey '^r' select-history
 
 # alias
 alias vim='nvim'
