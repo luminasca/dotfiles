@@ -270,13 +270,6 @@ noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
 " vim-browser-reload-linuxの設定
 let g:returnAppFlag = 1
 
-" rgの設定
-if executable('rg')
-  call denite#custom#var('file_rec', 'command',
-        \ ['rg', '--files', '--glob', '!.git'])
-  call denite#custom#var('grep', 'command', ['rg'])
-endif
-
 " tmux用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
