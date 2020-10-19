@@ -6,7 +6,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # パスの設定
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # zsh-completions(補完機能)の設定
