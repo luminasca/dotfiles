@@ -18,7 +18,7 @@ repo = 'tyru/caw.vim'
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-repo = 'vim-scripts/fcitx.vim'
+repo = 'lilydjwg/fcitx.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
