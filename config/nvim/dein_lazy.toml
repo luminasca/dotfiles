@@ -1,5 +1,4 @@
-[[plugins]]
-repo = 'Shougo/dein.vim'
+
 
 [[plugins]]
 repo = 'cespare/vim-toml'
@@ -67,10 +66,6 @@ depends = ['neosnippet-snippets']
 [[plugins]]
 repo = 'majutsushi/tagbar'
 on_cmd = ['TagbarToggle']
-
-[[plugins]]
-repo = 'cocopon/vaffle.vim'
-on_cmd = ['VaffleToggle']
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
