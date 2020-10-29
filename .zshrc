@@ -141,4 +141,3 @@ bindkey '^]' ghq-fzf
 # alias
 alias vim='nvim'
 alias ls='exa'
-alias rm='gomi'
