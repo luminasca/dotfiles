@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'Shougo/dein'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'mattn/ctrlp-matchfuzzy'
+depends = ['Ctrlp']
+hook_add = '''
+source ~/.config/nvim/plugins/ctrlp-matchfuzzy.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_cmd = ['FZFToggle']
+hook_add = '''
+source ~/.config/nvim/plugins/fzf.vim
+'''
+
+[[plugins]]
+repo = 'sjl/gundo.vim'
+on_cmd = ['GundoToggle']
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = ['TagbarToggle']
+
+[[plugins]]
+repo = 'gko/vim-coloresque'
+on_ft = 'css'
