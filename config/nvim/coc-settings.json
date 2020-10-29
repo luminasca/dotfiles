@@ -7,10 +7,6 @@
     "css": {
       "command": "css",
       "filetypes": ["css"]
-    },
-    "python": {
-      "command": "python",
-      "filetypes": ["python"]
     }
   },
   "diagnostic-languageserver.filetypes": {
@@ -18,6 +14,7 @@
     "sh": "shellcheck"
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
+    "sh": "shfmt",
+    "python": "black"
   }
 }
