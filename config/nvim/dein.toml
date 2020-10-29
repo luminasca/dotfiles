@@ -40,6 +40,13 @@ repo = 'basyura/bitly.vim'
 repo = 'tyru/caw.vim'
 
 [[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+hook_add = '''
+source ~/.config/nvim/plugins/coc.vim
+'''
+
+[[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
@@ -78,9 +85,6 @@ repo = 'itchyny/lightline.vim'
 hook_add = '''
 source ~/.config/nvim/plugins/lightline.vim
 '''
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'

@@ -1,0 +1,23 @@
+{
+  "languageserver": {
+    "html": {
+      "command": "html",
+      "filetypes": ["html"]
+    },
+    "css": {
+      "command": "css",
+      "filetypes": ["css"]
+    },
+    "python": {
+      "command": "python",
+      "filetypes": ["python"]
+    }
+  },
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "sh": "shellcheck"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "sh": "shfmt"
+  }
+}

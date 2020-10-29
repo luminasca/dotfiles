@@ -31,7 +31,7 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
-call map(dein#check_clean(), "delete(v:val, 'rf')")
+"call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 imap {} {}<Left>
 imap [] []<Left>
@@ -176,25 +176,10 @@ augroup MyXML
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
-" neosnippetの設定
-"Plug in key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
 "open-browserの設定
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-open)
 vmap gx <Plug>(openbrowser-open)
-
-" monster.vim uses vimproc's async
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-let g:endwise_no_mappings=1
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
