@@ -64,11 +64,12 @@ set guifont=Myrica\ M\ Bold\ 14
 " set termguicolors
 " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" colorscheme NeoSolarized
-" set background=light
 
 " cosmeの設定
-colorscheme cosme
+" colorscheme cosme
+
+" icebergの設定
+colorscheme iceberg
 
 " ステータスライン StatusLine
 set laststatus=2 " 常にステータスラインを表示
@@ -264,41 +265,3 @@ let g:python3_host_prog = $PYENV_PATH
 
 " vim-gitgutterの設定
 set updatetime=100
-
-" =============================================
-" Exコマンドの補完をfzfでする
-" =============================================
-function! CompletionExCmdWithFzf()
-    let currentCmdLine = getcmdline()
-    let isVisualMode = stridx(currentCmdLine, "'<,'>") != -1
-    let isCall = stridx(currentCmdLine, 'call ') != -1
-    let type = 'command'
-    let prefix = ''
-
-    if isCall == 1
-      let cmdLines = split(currentCmdLine, ' ')
-      let currentCmdLine = len(cmdLines) > 1 ? cmdLines[1] : ''
-      let type = 'function'
-      let prefix = 'call '
-    elseif isVisualMode == 1
-      let cmdLines = split(currentCmdLine, '>')
-      let currentCmdLine = len(cmdLines) > 1 ? cmdLines[1] : ''
-      let type = 'command'
-      let prefix = "'<,'>"
-    endif
-
-    let result = fzf#run({
-      \'source': getcompletion(currentCmdLine, type),
-      \ 'tmux': '-p60%,60%',
-      \ 'options': '--no-multi --bind tab:down'
-      \}
-    \)
-    if len(result) == 0
-      return ''
-    endif
-
-    " fzf#runの結果はlist型で返されるので、そのままコマンドラインに返すと^@が末尾に付与される
-    " ^@を削除するためjoin()している
-    return prefix . join(result, '')
-endfunction
-cnoremap <TAB> <C-\>eCompletionExCmdWithFzf()<CR>
