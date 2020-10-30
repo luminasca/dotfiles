@@ -1,11 +1,4 @@
 [[plugins]]
-repo = 'Shougo/dein'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
-[[plugins]]
 repo = 'mattn/ctrlp-matchfuzzy'
 depends = ['Ctrlp']
 hook_add = '''
