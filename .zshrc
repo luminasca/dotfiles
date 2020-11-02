@@ -7,7 +7,6 @@ eval "$(pyenv init -)"
 
 # パスの設定
 export GOPATH=$HOME/.go
-export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # zsh-completions(補完機能)の設定
@@ -139,5 +138,7 @@ zle -N ghq-fzf
 bindkey '^]' ghq-fzf
 
 # alias
-alias vim='nvim'
 alias ls='exa'
+
+# fzf.zshの設定
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
