@@ -144,10 +144,11 @@ alias ls='exa'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # rangerの設定（サブシェルのネストを防止する）
-function ranger( {
-    if [ -z "$RANGER_LEVEL" ]; then
-              /usr/local/bin/ranger $@
-                  else
-                            exit
-                                fi
-})
+function ranger() {
+  if [ -z "$RANGER_LEVEL" ]; then
+    /usr/local/bin/ranger $@
+  else
+    exit
+  fi
+
+}
