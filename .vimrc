@@ -205,7 +205,6 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:incsearch#magic = '\v'
 
 " vim-browser-reload-linuxの設定
-" default is 1
 let g:returnAppFlag = 1
 
 " insearch-easymotionの設定
@@ -250,9 +249,6 @@ endfunction
 noremap <silent><expr> m/ incsearch#go(<SID>config_migemo())
 noremap <silent><expr> m? incsearch#go(<SID>config_migemo({'command': '?'}))
 noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
-
-" vim-browser-reload-linuxの設定
-let g:returnAppFlag = 1
 
 " tmux用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum
