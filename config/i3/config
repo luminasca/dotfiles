@@ -222,9 +222,7 @@ exec --no-startup-id redshift
 exec --no-startup-id blueman-applet
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id pulseeffects --gapplication-service
-
-# polybarの設定
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id libinput-gestures-setup start
 
 # Multimedia keys
 # Pulse Audio controls
