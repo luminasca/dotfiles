@@ -1,12 +1,3 @@
-let g:coc_global_extensions = [
-      \, 'coc-json'
-      \, 'coc-html'
-      \, 'coc-css'
-      \, 'coc-jedi'
-      \, 'coc-python'
-      \, 'coc-sh'
-      \ ]
-
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
