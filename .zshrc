@@ -146,7 +146,7 @@ alias ls='exa'
 # rangerの設定（サブシェルのネストを防止する）
 function ranger() {
   if [ -z "$RANGER_LEVEL" ]; then
-    /usr/local/bin/ranger $@
+    /usr/bin/ranger $@
   else
     exit
   fi
