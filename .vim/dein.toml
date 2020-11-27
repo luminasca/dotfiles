@@ -49,7 +49,7 @@ repo = 'tyru/caw.vim'
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
 hook_source = '''
-source ~/.config/nvim/plugins/coc.vim
+source ~/.vim/plugins/coc.vim
 '''
 
 [[plugins]]
@@ -81,7 +81,7 @@ call defx#custom#option('_', {
       \ })
 '''
 hook_source = '''
-source ~/.config/nvim/plugins/defx.vim
+source ~/.vim/plugins/defx.vim
 '''
 
 [[plugins]]
@@ -90,7 +90,7 @@ repo = 'vim-scripts/fcitx.vim'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_source = '''
-source ~/.config/nvim/plugins/lightline.vim
+source ~/.vim/plugins/lightline.vim
 '''
 
 [[plugins]]
@@ -99,13 +99,13 @@ repo = 'tyru/open-browser.vim'
 [[plugins]]
 repo = 'kannokanno/previm'
 hook_source = '''
-source ~/.config/nvim/plugins/previm.vim
+source ~/.vim/plugins/previm.vim
 '''
 
 [[plugins]]
 repo = 'basyura/TweetVim'
 hook_source = '''
-source ~/.config/nvim/plugins/tweetvim.vim
+source ~/.vim/plugins/tweetvim.vim
 '''
 
 [[plugins]]
@@ -117,7 +117,7 @@ repo = 'h1mesuke/vim-alignta'
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_source = '''
-source ~/.config/nvim/plugins/anzu.vim
+source ~/.vim/plugins/anzu.vim
 '''
 
 [[plugins]]
@@ -126,7 +126,7 @@ repo = 'lordm/vim-browser-reload-linux'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_source = '''
-source ~/.config/nvim/plugins/vim-easymotion.vim
+source ~/.vim/plugins/vim-easymotion.vim
 '''
 
 [[plugins]]
@@ -141,7 +141,7 @@ repo = 'cohama/vim-hier'
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 hook_source = '''
-source ~/.config/nvim/plugins/vim-indent-guides.vim
+source ~/.vim/plugins/vim-indent-guides.vim
 '''
 
 [[plugins]]
@@ -162,7 +162,7 @@ repo = 'sheerun/vim-polyglot'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_source = '''
-source ~/.config/nvim/plugins/vim-quickrun.vim
+source ~/.vim/plugins/vim-quickrun.vim
 '''
 
 [[plugins]]
@@ -189,5 +189,5 @@ repo = 'mattn/webapi-vim'
 [[plugins]]
 repo = 'LeafCage/yankround.vim'
 hook_source = '''
-source ~/.config/nvim/plugins/yankround.vim
+source ~/.vim/plugins/yankround.vim
 '''
