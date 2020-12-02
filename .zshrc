@@ -93,23 +93,6 @@ fpath=($HOME/.zsh/zsh-completions/src $fpath)
 # 移動強化
 source $HOME/.zsh/enhancd/init.sh
 
-# Powerline-goの設定
-if [[ ${TERM} != "linux" ]]; then
-    function powerline_precmd() {
-        PS1="$(/usr/local/bin/powerline-go -error $? -shell zsh)"
-    }
-    function install_powerline_precmd() {
-        for s in "${precmd_functions[@]}"; do
-            if [ "$s" = "powerline_precmd" ]; then
-                return
-            fi
-        done
-        precmd_functions+=(powerline_precmd)
-    }
-
-    install_powerline_precmd
-fi
-
 # zの設定
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
@@ -139,6 +122,7 @@ bindkey '^]' ghq-fzf
 
 # alias
 alias ls='exa'
+alias vim='nvim'
 
 # fzf.zshの設定
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
