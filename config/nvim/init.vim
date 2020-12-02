@@ -54,22 +54,15 @@ set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
 " フォントサイズはお好みで
-set guifont=Myrica\ M\ Bold:h14
+set guifont=Cica\ Bold:h14
 " こっちは日本語フォント
-set guifontwide=Myrica\ M\ Bold:h14
+set guifontwide=Cica\ Bold:h14
 " gvim用フォント
-set guifont=Myrica\ M\ Bold\ 14
-
-" NeoSolarizedの設定
-" set termguicolors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" cosmeの設定
-" colorscheme cosme
+set guifont=Cica\ Bold\ 14
 
 " icebergの設定
 colorscheme iceberg
+set background=dark
 
 " ステータスライン StatusLine
 set laststatus=2 " 常にステータスラインを表示
@@ -187,7 +180,7 @@ imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " Tagbarの設定
-nmap <silent>t :TagbarToggle<CR>
+nmap <silent><Leader>t :TagbarToggle<CR>
 
 "検索関係
 " incsearch-vimの設定
@@ -207,7 +200,6 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:incsearch#magic = '\v'
 
 " vim-browser-reload-linuxの設定
-" default is 1
 let g:returnAppFlag = 1
 
 " insearch-easymotionの設定
@@ -252,9 +244,6 @@ endfunction
 noremap <silent><expr> m/ incsearch#go(<SID>config_migemo())
 noremap <silent><expr> m? incsearch#go(<SID>config_migemo({'command': '?'}))
 noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
-
-" vim-browser-reload-linuxの設定
-let g:returnAppFlag = 1
 
 " tmux用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum

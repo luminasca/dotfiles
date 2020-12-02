@@ -42,7 +42,7 @@ repo = 'tyru/caw.vim'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
 
@@ -73,7 +73,8 @@ call defx#custom#option('_', {
       \ 'columns': 'indent:git:icons:filename',
       \ 'show_ignored_files': 1,
       \ })
-
+'''
+hook_source = '''
 source ~/.config/nvim/plugins/defx.vim
 '''
 
@@ -82,7 +83,7 @@ repo = 'vim-scripts/fcitx.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/lightline.vim
 '''
 
@@ -91,13 +92,13 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'kannokanno/previm'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/previm.vim
 '''
 
 [[plugins]]
 repo = 'basyura/TweetVim'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/tweetvim.vim
 '''
 
@@ -109,7 +110,7 @@ repo = 'h1mesuke/vim-alignta'
 
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/anzu.vim
 '''
 
@@ -118,7 +119,7 @@ repo = 'lordm/vim-browser-reload-linux'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/vim-easymotion.vim
 '''
 
@@ -133,7 +134,7 @@ repo = 'cohama/vim-hier'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/vim-indent-guides.vim
 '''
 
@@ -154,7 +155,7 @@ repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/vim-quickrun.vim
 '''
 
@@ -181,6 +182,6 @@ repo = 'mattn/webapi-vim'
 
 [[plugins]]
 repo = 'LeafCage/yankround.vim'
-hook_add = '''
+hook_source = '''
 source ~/.config/nvim/plugins/yankround.vim
 '''
