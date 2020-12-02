@@ -136,3 +136,6 @@ function ranger() {
   fi
 
 }
+
+# starship's setting
+eval "$(starship init zsh)"
