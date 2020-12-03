@@ -1,3 +1,6 @@
+" ステータスメッセージをstatuslineに表示
+set statusline^=%{coc#status()}
+
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
