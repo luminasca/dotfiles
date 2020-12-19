@@ -91,7 +91,7 @@ source ~/.config/nvim/plugins/lightline.vim
 repo = 'tyru/open-browser.vim'
 
 [[plugins]]
-repo = 'kannokanno/previm'
+repo = 'previm/previm'
 hook_source = '''
 source ~/.config/nvim/plugins/previm.vim
 '''
@@ -122,12 +122,6 @@ repo = 'easymotion/vim-easymotion'
 hook_source = '''
 source ~/.config/nvim/plugins/vim-easymotion.vim
 '''
-
-[[plugins]]
-repo = "airblade/vim-gitgutter"
-
-[[plugins]]
-repo = "tpope/vim-fugitive"
 
 [[plugins]]
 repo = 'cohama/vim-hier'
