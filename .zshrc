@@ -5,6 +5,8 @@ eval "$(pyenv init -)"
 
 # パスの設定
 export GOPATH=$HOME/.go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 export PATH=$HOME/.local/bin:$PATH
 
 # zsh-completions(補完機能)の設定
@@ -55,7 +57,7 @@ function precmd() {
 # git ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {
   local branch_name st branch_status
-  
+
   branch='\ue0a0'
   color='%{\e[38;5;' #  文字色を設定
   green='114m%}'
@@ -63,7 +65,7 @@ function rprompt-git-current-branch {
   yellow='227m%}'
   blue='033m%}'
   reset='%{\e[0m%}'   # reset
-  
+
   branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
   st=`git status 2> /dev/null`
   if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
@@ -89,10 +91,10 @@ function rprompt-git-current-branch {
   # ブランチ名を色付きで表示する
   echo "${branch_status}$branch_name${reset}"
 }
- 
+
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
- 
+
 # プロンプトの右側にメソッドの結果を表示させる
 RPROMPT='`rprompt-git-current-branch`'
 
@@ -197,7 +199,6 @@ zle -N ghq-fzf
 bindkey '^]' ghq-fzf
 
 # alias
-alias ls='exa'
 alias vim='nvim'
 
 # fzf.zshの設定
