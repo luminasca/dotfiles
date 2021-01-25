@@ -1,8 +1,3 @@
-# pyenvの設定
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # パスの設定
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
@@ -213,3 +208,10 @@ function ranger() {
   fi
 
 }
+
+# URLの設定
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
