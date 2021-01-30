@@ -193,9 +193,6 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^]' ghq-fzf
 
-# alias
-alias vim='nvim'
-
 # fzf.zshの設定
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
