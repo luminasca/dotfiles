@@ -245,5 +245,8 @@ noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
 
-" pythonのパス
-let g:python3_host_prog = $PYENV_PATH
+" gitメッセージ用スペルチェック
+augroup GitSpellCheck
+    autocmd!
+    autocmd FileType gitcommit setlocal spell
+augroup END
