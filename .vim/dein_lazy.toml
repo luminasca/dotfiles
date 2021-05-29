@@ -1,14 +1,14 @@
 [[plugins]]
 repo = 'mattn/ctrlp-matchfuzzy'
 depends = ['Ctrlp']
-hook_add = '''
+hook_source = '''
 source ~/.vim/plugins/ctrlp-matchfuzzy.vim
 '''
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 on_cmd = ['FZFToggle']
-hook_add = '''
+hook_source = '''
 source ~/.vim/plugins/fzf.vim
 '''
 
