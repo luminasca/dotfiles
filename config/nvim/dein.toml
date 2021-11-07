@@ -1,0 +1,181 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+  let g:webdevicons_enable_nerdtree = 1
+  let g:webdevicons_enable_denite = 1
+'''
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo ="kristijanhusak/defx-git"
+hook_add = '''
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : '✹',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
+'''
+
+[[plugins]]
+repo = 'mileszs/ack.vim'
+
+[[plugins]]
+repo = 'basyura/bitly.vim'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+hook_source = '''
+source ~/.config/nvim/plugins/coc.vim
+'''
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = '''
+call defx#custom#column('icon', {
+      \ 'directory_icon': '▸',
+      \ 'opened_icon': '▾',
+      \ 'root_icon': ' ',
+      \ })
+
+call defx#custom#column('filename', {
+      \ 'min_width': 40,
+      \ 'max_width': 40,
+      \ })
+
+call defx#custom#column('mark', {
+      \ 'readonly_icon': '✗',
+      \ 'selected_icon': '✓',
+      \ })
+
+call defx#custom#option('_', {
+      \ 'columns': 'indent:git:icons:filename',
+      \ 'show_ignored_files': 1,
+      \ })
+'''
+hook_source = '''
+source ~/.config/nvim/plugins/defx.vim
+'''
+
+[[plugins]]
+repo = 'vim-scripts/fcitx.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_source = '''
+source ~/.config/nvim/plugins/lightline.vim
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'previm/previm'
+hook_source = '''
+source ~/.config/nvim/plugins/previm.vim
+'''
+
+[[plugins]]
+repo = 'basyura/TweetVim'
+hook_source = '''
+source ~/.config/nvim/plugins/tweetvim.vim
+'''
+
+[[plugins]]
+repo = 'basyura/twibill.vim'
+
+[[plugins]]
+repo = 'h1mesuke/vim-alignta'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_source = '''
+source ~/.config/nvim/plugins/anzu.vim
+'''
+
+[[plugins]]
+repo = 'lordm/vim-browser-reload-linux'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-easymotion.vim
+'''
+
+[[plugins]]
+repo = 'cohama/vim-hier'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-indent-guides.vim
+'''
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-quickrun.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_source = '''
+source ~/.config/nvim/plugins/yankround.vim
+'''
