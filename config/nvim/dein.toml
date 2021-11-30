@@ -6,11 +6,7 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
-hook_add = '''
-  let g:webdevicons_enable_nerdtree = 1
-  let g:webdevicons_enable_denite = 1
-'''
+repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
@@ -79,13 +75,16 @@ source ~/.config/nvim/plugins/defx.vim
 '''
 
 [[plugins]]
-repo = 'vim-scripts/fcitx.vim'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_source = '''
 source ~/.config/nvim/plugins/lightline.vim
 '''
+
+[[plugins]]
+repo = 'mfussenegger/nvim-dap'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
