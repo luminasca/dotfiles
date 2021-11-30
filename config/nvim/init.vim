@@ -54,11 +54,11 @@ set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
 " フォントサイズはお好みで
-set guifont=Cica\ Bold:h14
+set guifont=PlemolJP\ Console\ Bold:h14
 " こっちは日本語フォント
-set guifontwide=Cica\ Bold:h14
+set guifontwide=PlemolJP\ Console\ Bold:h14
 " gvim用フォント
-set guifont=Cica\ Bold\ 14
+set guifont=PlemolJP\ Console\ Bold\ 14
 
 " icebergの設定
 colorscheme iceberg
@@ -75,8 +75,8 @@ syntax on
 set expandtab
 
 " インデント設定
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 filetype plugin indent on
 
 " 無名レジスタに入るデータを、*レジスタにも入れる。
@@ -100,7 +100,6 @@ cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 " 編集関係
 set shiftround          " '<'や'>'でインデントする際に'shiftwidth'の倍数に丸める
 set infercase           " 補完時に大文字小文字を区別しない
-set virtualedit=all     " カーソルを文字が存在しない部分でも動けるようにする
 set hidden              " バッファを閉じる代わりに隠す(Undo履歴を残すため)
 set switchbuf=useopen   " 新しく開く代わりにすでに開いてあるバッファを開く
 set showmatch           " 対応する括弧などをハイライト表示する
@@ -162,13 +161,6 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
 " Gundo.vimの設定
 nmap U :<C-u>GundoToggle<CR>
-
-" htmlのタグ補完
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-augroup END
 
 "open-browserの設定
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
