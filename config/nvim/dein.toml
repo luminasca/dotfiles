@@ -160,6 +160,12 @@ repo = 'prabirshrestha/vim-lsp'
 repo = 'kana/vim-smartinput'
 
 [[plugins]]
+repo = 'premourning/vimspector'
+hook_source = '''
+source ~/.config/nvim/plugins/vimspector.vim
+'''
+
+[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
