@@ -80,7 +80,6 @@ set shiftwidth=4
 filetype plugin indent on
 
 " 無名レジスタに入るデータを、*レジスタにも入れる。
-" set clipboard+=unnamed
 set clipboard=unnamedplus
 
 set wrap                " 長いテキストの折り返し
@@ -158,80 +157,6 @@ vmap <Leader>c <Plug>(caw:hatpos:toggle)
 " 行頭にコメントをトグル
 nmap <Leader>, <Plug>(caw:zeropos:toggle)
 vmap <Leader>, <Plug>(caw:zeropos:toggle)
-
-" Gundo.vimの設定
-nmap U :<C-u>GundoToggle<CR>
-
-"open-browserの設定
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-open)
-vmap gx <Plug>(openbrowser-open)
-
-" Tagbarの設定
-nmap <silent><Leader>t :TagbarToggle<CR>
-
-"検索関係
-" incsearch-vimの設定
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
-let g:incsearch#magic = '\v'
-
-" vim-browser-reload-linuxの設定
-let g:returnAppFlag = 1
-
-" insearch-easymotionの設定
-function! s:config_easyfuzzymotion(...) abort
-  return extend(copy({
-  \   'converters': [incsearch#config#fuzzy#converter()],
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {"\<C-l>": '<Over>(easymotion)'},
-  \   'is_expr': 0,
-  \   'is_stay': 1
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
-
-" insearch-fuzzyの設定
-function! s:config_fuzzyall(...) abort
-  return extend(copy({
-  \   'converters': [
-  \     incsearch#config#fuzzy#converter(),
-  \     incsearch#config#fuzzyspell#converter()
-  \   ],
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> z/ incsearch#go(<SID>config_fuzzyall())
-noremap <silent><expr> z? incsearch#go(<SID>config_fuzzyall({'command': '?'}))
-noremap <silent><expr> zg? incsearch#go(<SID>config_fuzzyall({'is_stay': 1}))
-
-" insearch-migemoの設定
-function! s:config_migemo(...) abort
-  return extend(copy({
-  \   'converters': [
-  \     incsearch#config#migemo#converter(),
-  \   ],
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {"\<C-l>": '<Over>(easymotion)'},
-  \   'is_expr': 0,
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> m/ incsearch#go(<SID>config_migemo())
-noremap <silent><expr> m? incsearch#go(<SID>config_migemo({'command': '?'}))
-noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
 
 " tmux用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum

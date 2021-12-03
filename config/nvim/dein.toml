@@ -6,25 +6,40 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
+repo = 'ryanoasis/vim-devicons'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-devicons.vim
+'''
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
 
 [[plugins]]
-repo ="kristijanhusak/defx-git"
-hook_add = '''
-call defx#custom#column('git', 'indicators', {
-  \ 'Modified'  : '✹',
-  \ 'Staged'    : '✚',
-  \ 'Untracked' : '✭',
-  \ 'Renamed'   : '➜',
-  \ 'Unmerged'  : '═',
-  \ 'Ignored'   : '☒',
-  \ 'Deleted'   : '✖',
-  \ 'Unknown'   : '?'
-  \ })
+repo ='kristijanhusak/defx-git'
+hook_source = '''
+source ~/.config/nvim/plugins/defx-git.vim
 '''
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+[[plugins]]
+repo = 'LumaKernel/ddc-file'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+
+[[plugins]]
+repo = 'Shougo/ddc-converter_remove_overlap'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'mileszs/ack.vim'
@@ -36,40 +51,11 @@ repo = 'basyura/bitly.vim'
 repo = 'tyru/caw.vim'
 
 [[plugins]]
-repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
-hook_source = '''
-source ~/.config/nvim/plugins/coc.vim
-'''
-
-[[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 depends = ['defx-git', 'defx-icons']
-hook_add = '''
-call defx#custom#column('icon', {
-      \ 'directory_icon': '▸',
-      \ 'opened_icon': '▾',
-      \ 'root_icon': ' ',
-      \ })
-
-call defx#custom#column('filename', {
-      \ 'min_width': 40,
-      \ 'max_width': 40,
-      \ })
-
-call defx#custom#column('mark', {
-      \ 'readonly_icon': '✗',
-      \ 'selected_icon': '✓',
-      \ })
-
-call defx#custom#option('_', {
-      \ 'columns': 'indent:git:icons:filename',
-      \ 'show_ignored_files': 1,
-      \ })
-'''
 hook_source = '''
 source ~/.config/nvim/plugins/defx.vim
 '''
@@ -81,13 +67,10 @@ source ~/.config/nvim/plugins/lightline.vim
 '''
 
 [[plugins]]
-repo = 'mfussenegger/nvim-dap'
-
-[[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-
-[[plugins]]
 repo = 'tyru/open-browser.vim'
+hook_source = '''
+source ~/.config/nvim/plugins/open-browser.vim
+'''
 
 [[plugins]]
 repo = 'previm/previm'
@@ -115,6 +98,9 @@ source ~/.config/nvim/plugins/anzu.vim
 
 [[plugins]]
 repo = 'lordm/vim-browser-reload-linux'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-browser-reload-linux.vim
+'''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
