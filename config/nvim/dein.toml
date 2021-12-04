@@ -48,6 +48,9 @@ source ~/.config/nvim/plugins/lightline.vim
 '''
 
 [[plugins]]
+repo = 'mfussenegger/nvim-dap'
+
+[[plugins]]
 repo = 'Shougo/pum.vim'
 hook_source = '''
 source ~/.config/nvim/plugins/pum.vim
@@ -97,12 +100,6 @@ repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
 repo = 'kana/vim-smartinput'
-
-[[plugins]]
-repo = 'premourning/vimspector'
-hook_source = '''
-source ~/.config/nvim/plugins/vimspector.vim
-'''
 
 [[plugins]]
 repo = 'tpope/vim-surround'
