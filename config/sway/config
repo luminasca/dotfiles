@@ -14,12 +14,12 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term gnome-terminal
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu ~/.config/i3/bin/rofi_launch.sh
+set $menu ~/.config/rofi/rofi_launch.sh
 
 ### Output configuration
 #
@@ -86,7 +86,7 @@ output * bg ~/Pictures/DSC_0109.JPG fill
     exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
 
     # font
-    font pang' MotoyaLMaru 12
+    font pango MotoyaLMaru 12
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -225,12 +225,43 @@ bar {
 
 # change keyboad layout
 input * {
-    xkb_layout "jp"
+    xkb_layout "us"
     xkb_variant "colemak,,typewriter"
     xkb_options "grp:win_space_toggle"
 
 }
 
-input <identifier> xkb_model "pc"105
+# Moniter posision
+output DP-1 pos 0,0 res 3840x2160
+output HDMI-A-1 pos 3840,0 res 1920x1080
+
+# allow floating applications
+for_window [app_id="totem"] {
+   floating enable
+}
+
+for_window [app_id="org.gnome.Nautilus"] {
+   floating enable
+}
+
+for_window [app_id="eog"] {
+   floating enable
+}
+
+for_window [app_id="gedit"] {
+   floating enable
+}
+
+for_window [app_id="transmission-gtk"] {
+    floating enable
+}
+
+for_window [class="vlc"] {
+    floating enable
+}
+
+for_window [app_id="evince"] {
+    floating enable
+}
 
 include /etc/sway/config.d/*
