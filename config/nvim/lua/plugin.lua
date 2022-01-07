@@ -1,6 +1,5 @@
 require('plugins.anzu')
 require('plugins.caw')
-require('plugins.ddc')
 require('plugins.fzf')
 require('plugins.gundo')
 require('plugins.lualine')
