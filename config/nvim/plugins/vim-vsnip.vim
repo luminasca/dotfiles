@@ -5,3 +5,4 @@ smap <expr> <C-f> vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : '<C-f>'
 imap <expr> <C-b> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<C-b>'
 smap <expr> <C-b> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<C-b>'
 let g:vsnip_filetypes = {}
+autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)
