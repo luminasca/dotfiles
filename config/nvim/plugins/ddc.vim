@@ -6,9 +6,9 @@ call ddc#custom#patch_global('sourceOptions', {
       \ 'sorters': ['sorter_rank'],
       \ 'converters': ['converter_remove_overlap'],
       \ },
-      \ 'around': {'mark': 'A'},
+      \ 'around': {'mark': 'Around'},
       \ 'nvim-lsp': {
-      \ 'mark': 'L',
+      \ 'mark': 'LSP',
       \ 'forceCompletionPattern': '\.\w*|:\w*|->\w*',
       \ },
       \ 'file': {
