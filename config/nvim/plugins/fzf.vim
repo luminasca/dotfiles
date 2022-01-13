@@ -1,4 +1,3 @@
-vim.cmd([[
 " ripgrepで検索中、?を押すとプレビュー:
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -10,4 +9,3 @@ command! -bang -nargs=* Rg
 " Filesコマンドにもプレビューを出す
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-]])

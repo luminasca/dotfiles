@@ -1,0 +1,78 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_source = '''
+source ~/.config/nvim/plugins/lightline.vim
+'''
+
+[[plugins]]
+repo = 'h1mesuke/vim-alignta'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_source = '''
+source ~/.config/nvim/plugins/anzu.vim
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-easymotion.vim
+'''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-indent-guides.vim
+'''
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_source = '''
+source ~/.config/nvim/plugins/vim-quickrun.vim
+'''
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_source = '''
+source ~/.config/nvim/plugins/yankround.vim
+'''

@@ -1,5 +1,4 @@
 let g:lightline = {
-      \ 'separator': {'left': '', 'right:'' ,}
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
@@ -31,7 +30,7 @@ function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
         \  &ft == 'uite' ? uite#get_status_string() :
         \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]' .
+        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
