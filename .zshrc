@@ -4,6 +4,9 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export PATH=$HOME/.local/bin:$PATH
 
+#エイリアス
+alias vim='nvim'
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
