@@ -1,0 +1,114 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+hook_source = '''
+source ~/.vim/plugins/ddc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+[[plugins]]
+repo = 'matsui54/denops-signature_help'
+hook_source = '''
+call signature_help#enable()
+'''
+
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+hook_source = '''
+call popup_preview#enable()
+'''
+
+[[plugins]]
+repo = 'LumaKernel/ddc-file'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+
+[[plugins]]
+repo = 'Shougo/ddc-converter_remove_overlap'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'h1mesuke/vim-alignta'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_source = '''
+source ~/.vim/plugins/anzu.vim
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_source = '''
+source ~/.vim/plugins/vim-easymotion.vim
+'''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_source = '''
+source ~/.vim/plugins/vim-indent-guides.vim
+'''
+
+[[plugins]]
+repo = 'kana/vim-operator-replace'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_source = '''
+source ~/.vim/plugins/vim-quickrun.vim
+'''
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+hook_source = '''
+source ~/.vim/plugins/yankround.vim
+'''

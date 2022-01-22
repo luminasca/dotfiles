@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_cmd = ['FZFToggle']
+hook_add = '''
+source ~/.vim/plugins/fzf.vim
+'''
+
+[[plugins]]
+repo = 'sjl/gundo.vim'
+on_cmd = ['GundoToggle']
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = ['TagbarToggle']
+
+[[plugins]]
+repo = 'gko/vim-coloresque'
+on_ft = 'css'
