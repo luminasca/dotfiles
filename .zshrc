@@ -6,7 +6,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # pyenvの設定
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
 eval "$(pyenv init -)"
 
 # 色を使用出来るようにする
