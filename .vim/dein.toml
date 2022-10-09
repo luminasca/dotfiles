@@ -6,10 +6,25 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'tokorom/vim-swift-format'
+hook_source = '''
+source ~/.vim/plugins/vim-swift-format.vim
+'''
+
+[[plugins]]
 repo = 'tyru/caw.vim'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'

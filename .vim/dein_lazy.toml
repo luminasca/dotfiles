@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 on_cmd = ['FZFToggle']
-hook_add = '''
+hook_source = '''
 source ~/.vim/plugins/fzf.vim
 '''
 
@@ -32,24 +32,6 @@ on_source = 'ddc.vim'
 [[plugins]]
 repo = 'LumaKernel/ddc-file'
 on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-nvim-lsp'
-on_source = 'ddc.vim'
-
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip'
-on_event = 'InsertEnter'
-depends = ['vim-vsnip-integ', 'friendly-snippets']
-hook_source = '''
-source ~/.vim/plugins/vim-vsnip.vim
-'''
-
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
-
-[[plugins]]
-repo = 'rafamadriz/friendly-snippets'
 
 [[plugins]]
  repo = 'matsui54/denops-signature_help'
