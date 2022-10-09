@@ -38,20 +38,6 @@ repo = 'Shougo/ddc-nvim-lsp'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'hrsh7th/vim-vsnip'
-on_event = 'InsertEnter'
-depends = ['vim-vsnip-integ', 'friendly-snippets']
-hook_source = '''
-source ~/.config/nvim/plugins/vim-vsnip.vim
-'''
-
-[[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
-
-[[plugins]]
-repo = 'rafamadriz/friendly-snippets'
-
-[[plugins]]
  repo = 'neovim/nvim-lspconfig'
  on_event = 'BufEnter'
  hook_source = '''
@@ -83,8 +69,8 @@ EOF
 '''
 
 [[plugins]]
- repo ='williamboman/nvim-lsp-installer'
- on_source = 'nvim-lspconfig'
+repo = 'williamboman/mason.nvim'
+on_source = 'nvim-lspconfig'
 
 [[plugins]]
  repo = 'matsui54/denops-signature_help'
