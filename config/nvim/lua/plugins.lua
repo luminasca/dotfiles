@@ -27,5 +27,16 @@ require'packer'.startup(function()
     use 'p00f/nvim-ts-rainbow'
     use 'haringsrob/nvim_context_vt'
     use 'm-demare/hlargs.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    
+    use {
+	    "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use({"https://git.sr.ht/~whynothugo/lsp_lines.nvim",config = function()
+        require("lsp_lines").setup()
+        end,
+    })
 
 end)
