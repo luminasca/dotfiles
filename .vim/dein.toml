@@ -21,9 +21,6 @@ source ~/.vim/plugins/vim-swift-format.vim
 repo = 'tyru/caw.vim'
 
 [[plugins]]
-repo = 'vim-denops/denops.vim'
-
-[[plugins]]
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
@@ -37,9 +34,12 @@ repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
-hook_source = '''
-source ~/.vim/plugins/vim-lsp-settings.vim
-'''
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
 
 [[plugins]]
 repo = 'h1mesuke/vim-alignta'
