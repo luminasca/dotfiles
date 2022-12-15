@@ -169,14 +169,3 @@ nmap <silent><Leader>t :TagbarToggle<CR>
 " tmux用の設定
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
-
-" vim-swift-lsp
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-let g:lsp_signature_help_enabled = 1
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_settings = {
-\  'sourcekit-lsp': {'cmd': ['xcrun', 'sourcekit-lsp']}
-\}
