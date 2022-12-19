@@ -213,8 +213,7 @@ bindsym $mod+r mode "resize"
 exec mako
 exec fcitx5 -d
 exec gammastep
-exec parcellite
-
+exec copyq
 
 #
 # Status Bar:
