@@ -6,7 +6,7 @@ alpha="cc"   # opacity (00〜FF)
 options=(
   -modi            "drun,system:~/.config/rofi/rofi_system.sh"
   -show            "drun"
-  -font            "MotoyaLMaru 28"
+  -font            "KosugiMaru 20"
   -width           "90"
   -padding         "80"
   -lines           "8"
