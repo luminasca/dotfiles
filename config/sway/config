@@ -14,12 +14,12 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term mate-terminal
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu ~/.config/rofi/rofi_launch.sh
+set $menu $HOME/.config/rofi/rofi_launch.sh
 
 ### Output configuration
 #
@@ -213,6 +213,7 @@ bindsym $mod+r mode "resize"
 exec mako
 exec fcitx5 -d
 exec gammastep
+exec parcellite
 
 
 #
@@ -225,7 +226,7 @@ bar {
 
 # change keyboad layout
 input * {
-    xkb_layout "us"
+    xkb_layout "jp"
     xkb_variant "colemak,,typewriter"
     xkb_options "grp:win_space_toggle"
 
@@ -263,5 +264,18 @@ for_window [class="vlc"] {
 for_window [app_id="evince"] {
     floating enable
 }
+
+# backlight
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+# sound
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 include /etc/sway/config.d/*
