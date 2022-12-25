@@ -14,12 +14,12 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term mate-terminal
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu $HOME/.config/rofi/rofi_launch.sh
+set $menu wofi -G --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -80,13 +80,13 @@ output * bg ~/Pictures/DSC_0109.JPG fill
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # start systemd target
     exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
 
     # font
-    font pango MotoyaLMaru 12
+    font pango KosugiMaru 12
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -213,7 +213,6 @@ bindsym $mod+r mode "resize"
 exec mako
 exec fcitx5 -d
 exec gammastep
-exec copyq
 
 #
 # Status Bar:
@@ -240,7 +239,7 @@ for_window [app_id="totem"] {
    floating enable
 }
 
-for_window [app_id="org.gnome.Nautilus"] {
+for_window [app_id="cawbird"] {
    floating enable
 }
 
@@ -252,7 +251,7 @@ for_window [app_id="gedit"] {
    floating enable
 }
 
-for_window [app_id="transmission-gtk"] {
+for_window [app_id="qtbittorrent"] {
     floating enable
 }
 
