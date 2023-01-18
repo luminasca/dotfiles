@@ -1,10 +1,15 @@
 #エイリアス
 alias ls='lsd'
+alias vim='nvim'
 
-# パスの設定
+# Pyenvパス
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Goパス
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -143,6 +148,6 @@ zstyle ':completion:*:default' menu select=1
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light b4b4r07/enhancd
-zinit light jhawthorn/fzy
+# zinit light jhawthorn/fzy
 zinit light momo-lab/zsh-abbrev-alias
 zinit light zsh-users/zsh-history-substring-search
