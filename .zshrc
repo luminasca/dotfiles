@@ -2,11 +2,6 @@
 alias ls='lsd'
 alias vim='nvim'
 
-# Pyenvパス
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # Goパス
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
