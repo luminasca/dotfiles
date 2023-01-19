@@ -14,7 +14,7 @@ map("n", "<leader>l", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('
 
 -- dap-ui key map
 map("n", "<leader>d", ":lua require'dapui'.toggle()<CR>", { silent = true})
-map("n", "<leader><leader>df", ":lua require'dapui'.eval()<CR>", { silent = true})
+map("n", "<leader>w", ":lua require'dapui'.eval()<CR>", { silent = true})
 
 -- dap-go key map
 map("n", "<leader>td", ":lua require'dap-go'.debug_test()", { silent = true })
@@ -155,3 +155,8 @@ dap.configurations.go = {
 		program = "./${relativeFileDirname}",
 	}
 }
+
+local venv = os.getenv('VIRTUAL_ENV')
+command = string.format('%s/bin/python', venv)
+
+require('dap-python').setup(command)
