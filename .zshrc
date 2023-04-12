@@ -1,10 +1,20 @@
 #エイリアス
 alias ls='lsd'
-alias vim='nvim'
 
 # Goパス
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
+
+# pyenvパス
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# poetryのパス
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Codonのパス
+export PATH="$HOME/.codon/bin:$PATH"
 
 # 色を使用出来るようにする
 autoload -Uz colors
