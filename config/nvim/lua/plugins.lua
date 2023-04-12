@@ -6,6 +6,7 @@ require'packer'.startup(function()
 
     use 'mfussenegger/nvim-dap'
     use 'rcarriga/nvim-dap-ui'
+    use 'mfussenegger/nvim-dap-python'
     use 'leoluz/nvim-dap-go'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -13,7 +14,6 @@ require'packer'.startup(function()
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
-    use 'mfussenegger/nvim-dap-python'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
