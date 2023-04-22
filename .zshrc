@@ -11,11 +11,14 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # poetryのパス
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Codonの設定
 export PATH="$HOME/.codon/bin:$PATH"
 export CODON_PYTHON=$PYENV_ROOT/versions/3.11.3/lib/libpython3.11.so
+
+# Nim
+export PATH=/home/con/.nimble/bin:$PATH
 
 # 色を使用出来るようにする
 autoload -Uz colors
