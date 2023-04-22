@@ -1,0 +1,15 @@
+{
+    "nim":{
+        "command": "nimlsp",
+        "args": [
+             "/home/con/.choosenim/toolchains/nim-1.6.12/"
+        ],
+        "rootPatterns": [
+            "src/",
+            ".git/"
+        ],
+        "filetypes": [
+            "nim", "nimble"
+        ]
+    }
+}
