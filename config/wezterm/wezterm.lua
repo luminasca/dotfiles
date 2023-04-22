@@ -4,12 +4,12 @@ return {
   keys = {
     {
       key = 'v',
-      mods = 'CTRL|ALT',
+      mods = 'CTRL|SUPER',
       action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain"},
     },
     {
       key = 'h',
-      mods = 'CTRL|ALT',
+      mods = 'CTRL|SUPER',
       action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
     },
   },
