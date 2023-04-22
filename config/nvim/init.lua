@@ -1,5 +1,3 @@
-vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
-
-require('plugins')
+require('lazy_nvim')
 require('settings')
 require('nvim-dap')

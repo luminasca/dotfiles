@@ -1,39 +1,40 @@
-vim.cmd[[packadd packer.nvim]]
-
-require'packer'.startup(function()
-
-    use{'wbthomason/packer.nvim', opt = true}
-
-    use 'mfussenegger/nvim-dap'
-    use 'rcarriga/nvim-dap-ui'
-    use 'mfussenegger/nvim-dap-python'
-    --use 'leoluz/nvim-dap-go'
-    --use 'hrsh7th/nvim-cmp'
-    --use 'hrsh7th/cmp-nvim-lsp'
-    use {'cocopon/iceberg.vim', opt = true}
-    --use 'neovim/nvim-lspconfig'
-    --use 'williamboman/mason.nvim'
-    --use 'williamboman/mason-lspconfig.nvim'
-    use {
+return{
+    {'mfussenegger/nvim-dap', ft = 'py'},
+    {'rcarriga/nvim-dap-ui', ft = 'py'},
+    {'mfussenegger/nvim-dap-python', ft = 'py'},
+    {'hrsh7th/nvim-cmp', event = 'InsertEnter, CmdlineEnter'},
+    {'hrsh7th/cmp-nvim-lsp', event = 'InsertEnter'}, 
+    {'hrsh7th/cmp-buffer', event = 'InsertEnter'},
+    {'hrsh7th/cmp-path', event = 'InsertEnter'},
+    {'hrsh7th/cmp-vsnip', event = 'InsertEnter'},
+    {'hrsh7th/cmp-cmdline', event = 'ModeChanged'},
+    {'hrsh7th/cmp-nvim-lsp-signature-help', event = 'InsertEnter'},
+    {'hrsh7th/cmp-nvim-lsp-document-symbol', event = 'InsertEnter'},
+    {'onsails/lspkind.nvim', event = 'InsertEnter'},
+    {'hrsh7th/vim-vsnip', event = 'InsertEnter'},
+    {'hrsh7th/vim-vsnip-integ', event = 'InsertEnter'},
+    {'rafamadriz/friendly-snippets', event = 'InsertEnter'},
+    {'windwp/nvim-autopairs', event = 'InsertEnter'},
+    {'j-hui/fidget.nvim', event = 'LspAttach'},
+    { -- colorscheme
+        'cocopon/iceberg.vim',
+        config = function()
+            vim.cmd([[colorscheme iceberg]])
+        end
+    },
+    {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    
-    use 'neoclide/coc.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'yioneko/nvim-yati'
-    use 'p00f/nvim-ts-rainbow'
-    use 'haringsrob/nvim_context_vt'
-    use 'm-demare/hlargs.nvim'
-    use 'lukas-reineke/indent-blankline.nvim'
-    use {
-	    "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
-
-    use({"https://git.sr.ht/~whynothugo/lsp_lines.nvim",config = function()
-        require("lsp_lines").setup()
-        end,
-    })
-
-end)
+        dependencies = {
+            'nvim-tree/nvim-web-devicons'
+        }
+    },
+    {
+        'yioneko/nvim-yati',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter'
+        }
+    },      
+    'p00f/nvim-ts-rainbow',
+    'm-demare/hlargs.nvim',
+    'lukas-reineke/indent-blankline.nvim'
+}
