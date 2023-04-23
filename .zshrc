@@ -1,10 +1,6 @@
 #エイリアス
 alias ls='lsd'
 
-# Goパス
-export GOPATH="$HOME/.go"
-export PATH="$GOPATH/bin:$PATH"
-
 # pyenvパス
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
