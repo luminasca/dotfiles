@@ -16,9 +16,6 @@ map("n", "<leader>l", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('
 map("n", "<leader>d", ":lua require'dapui'.toggle()<CR>", { silent = true})
 map("n", "<leader>w", ":lua require'dapui'.eval()<CR>", { silent = true})
 
--- dap-go key map
-map("n", "<leader>td", ":lua require'dap-go'.debug_test()", { silent = true })
-
 require("dapui").setup({
 	icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
 	mappings = {
@@ -90,5 +87,8 @@ require("dapui").setup({
 		max_value_lines = 100, -- Can be integer or nil.
 	}
 })
+
+local venv = os.getenv('VIRTUAL_ENV')
+command = string.format('$HOME/.pyenv/shims/python3', venv)
 
 require('dap-python').setup(command)

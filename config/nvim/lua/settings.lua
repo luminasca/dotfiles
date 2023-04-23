@@ -4,7 +4,7 @@ vim.opt.backspace = "indent,eol,start"
 vim.opt.ambiwidth = "single"
 vim.opt.wildmenu = true
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 vim.opt.showcmd = true
 vim.opt.hlsearch = true
 vim.opt.hidden = true
@@ -204,6 +204,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
 
 require('lualine').setup {
  options = {
+  globalstatus = true,
   icons_enabled = true,
   theme = 'auto',
   component_separators = { left = '|', right = '|'},
