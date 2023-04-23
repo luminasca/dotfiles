@@ -1,4 +1,4 @@
-call ddc#custom#patch_global('completionMenu', 'pum.vim')
+call ddc#custom#patch_global('ui', 'pum')
 call ddc#custom#patch_global('sources', [
  \ 'vim-lsp',
  \ 'file'
