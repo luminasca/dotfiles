@@ -16,6 +16,6 @@ return {
   font = wezterm.font("HackGen35 Console NF", {weight = "Bold"}), -- 自分の好きなフォントいれる
   use_ime = true, -- wezは日本人じゃないのでこれがないとIME動かない
   font_size = 13.0,
-  color_scheme = "iceberg-dark",
+  color_scheme = "nord",
   adjust_window_size_when_changing_font_size = false,
 }
