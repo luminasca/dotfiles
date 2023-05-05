@@ -26,7 +26,7 @@ vim.opt.swapfile = false
 vim.opt.formatoptions:remove('t')
 vim.opt.formatoptions:append('mM')
 
-vim.cmd 'colorscheme iceberg'
+vim.cmd 'colorscheme nord'
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false }
