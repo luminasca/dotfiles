@@ -868,7 +868,7 @@ font:
   #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
-  #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
+  #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward  
 
 #debug:
   # Display the time it takes to redraw each frame.
