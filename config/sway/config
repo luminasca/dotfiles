@@ -239,10 +239,6 @@ for_window [app_id="totem"] {
    floating enable
 }
 
-for_window [app_id="cawbird"] {
-   floating enable
-}
-
 for_window [app_id="eog"] {
    floating enable
 }
@@ -262,6 +258,10 @@ for_window [class="vlc"] {
 for_window [app_id="evince"] {
     floating enable
 }
+
+for_window [class="VirtualBox Manager"] {
+        floating enable
+    }
 
 # backlight
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
