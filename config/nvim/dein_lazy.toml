@@ -51,7 +51,7 @@ repo = 'LumaKernel/ddc-source-file'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'Shougo/ddc-filter-matcher_lenght'
+repo = 'Shougo/ddc-filter-matcher_length'
 on_source = 'ddc.vim'
 
 [[plugins]]
