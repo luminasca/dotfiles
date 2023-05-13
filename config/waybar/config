@@ -64,7 +64,7 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "{usage}%/{avg_frequency}/{max_frequency}G ",
+        "format": "{usage}%/{avg_frequency}/{max_frequency}G",
         "tooltip": true
     },
     "memory": {
@@ -90,7 +90,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         //"format-good": "", // An empty format will hide the module
