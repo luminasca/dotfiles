@@ -1,5 +1,5 @@
 #エイリアス
-alias ls='lsd'
+alias ls='exa'
 
 # pyenvパス
 export PYENV_ROOT="$HOME/.pyenv"
@@ -12,6 +12,9 @@ export PATH=/home/con/.nimble/bin:$PATH
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
+
+# 色の変更
+zstyle :prompt:pure:path color green
 
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -109,9 +112,6 @@ zle -N bracketed-paste bracketed-paste-magic
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
-# starship
-eval "$(starship init zsh)"
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -146,6 +146,9 @@ zstyle ':completion:*:default' menu select=1
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light b4b4r07/enhancd
-# zinit light jhawthorn/fzy
 zinit light momo-lab/zsh-abbrev-alias
 zinit light zsh-users/zsh-history-substring-search
+
+# Load pure theme
+zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+zinit light sindresorhus/pure
