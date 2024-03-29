@@ -1,10 +1,9 @@
 #エイリアス
-alias ls='exa'
+alias ls='lsd'
+alias vim='nvim'
 
-# pyenvパス
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+. "$HOME/.cargo/env"
+source "$HOME/.rye/env"
 
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
