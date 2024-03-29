@@ -1,0 +1,33 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "HackGen35 Console NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "HackGen35 Console NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "HackGen35 Console NF"
+style = "Italic"
+
+[font.normal]
+family = "HackGen35 Console NF"
+style = "Regular"
+
+[shell]
+# args = ["-l", "-c", 'tmux a -t default || tmux new -s default\; source ~/.config/tmux/default.session.conf']
+args = ["-l"]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.8
+
+[window.dimensions]
+columns = 80
+lines = 24
