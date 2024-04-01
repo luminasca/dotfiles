@@ -235,7 +235,7 @@ output DP-1 pos 0,0 res 3840x2160
 output HDMI-A-1 pos 3840,0 res 1920x1080
 
 # allow floating applications
-for_window [app_id="totem"] {
+for_window [app_id="nemo"] {
    floating enable
 }
 
@@ -243,7 +243,7 @@ for_window [app_id="eog"] {
    floating enable
 }
 
-for_window [app_id="gedit"] {
+for_window [app_id="xed"] {
    floating enable
 }
 
@@ -258,10 +258,6 @@ for_window [class="vlc"] {
 for_window [app_id="evince"] {
     floating enable
 }
-
-for_window [class="VirtualBox Manager"] {
-        floating enable
-    }
 
 # backlight
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
