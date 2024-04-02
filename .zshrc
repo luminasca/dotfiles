@@ -2,11 +2,17 @@
 alias ls='lsd'
 alias vim='nvim'
 
-. "$HOME/.cargo/env"
-source "$HOME/.rye/env"
-
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
+
+# Mojo
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib/mojo
+export PATH=$PATH:~/.modular/pkg/packages.modular.com_mojo/bin/
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # 色を使用出来るようにする
 autoload -Uz colors
