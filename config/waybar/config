@@ -16,14 +16,14 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "　{usage}%"
+        "format": " {usage}%"
     },
     "memory": {
-        "format": "　{}%"
+        "format": " {}%"
     },
     "backlight": {
         //"device": "intel_backlight",
-        "format": "　{percent}%",
+        "format": "{percent}%",
         "format-icons": ["", ""]
     },
     "battery": {
@@ -32,20 +32,20 @@
         //    "warning": 30,
         //    "critical": 15
         //},
-        "format": "　{capacity}%"
+        "format": " {capacity}%"
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         //"format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "　{signalStrength}%",
+        // "interface": "wlp3s0", // (Optional) To force the use of this interface
+        "format-wifi": " {signalStrength}%",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
         "format-disconnected": "⚠"
     },
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "　{volume}%",
+        "format": " {volume}%",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": {

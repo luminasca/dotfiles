@@ -15,9 +15,9 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     border: none;
-    font-family: "JetBrainsMono";
+    font-family: "Kosugi Maru";
     /* Recommended font sizes: 720p: ~14px, 1080p: ~18px */
-    font-size: 14px;
+    font-size: 20px;
 }
 
 window#waybar {
@@ -68,7 +68,11 @@ window#waybar.hidden {
     border-bottom: 1px solid #ffffff;
 }
 
-#clock,
+#clock {
+    padding: 5px;
+    font-size: 36px;
+}
+
 #battery,
 #cpu,
 #memory,
@@ -105,7 +109,7 @@ window#waybar.hidden {
 }
 
 #clock {
-    color: #90ee90;
+    color: #FFFFFF;
 }
 
 #battery {
