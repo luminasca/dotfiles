@@ -1,12 +1,12 @@
 #エイリアス
-alias ls='exa'
+alias ls='lsd'
 alias vim='nvim'
 
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
 
-# Rye
-source "$HOME/.rye/env"
+# uv
+source $HOME/.cargo/env
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -151,3 +151,8 @@ zinit light zsh-users/zsh-history-substring-search
 # Load pure theme
 zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
 zinit light sindresorhus/pure
+
+# direnv
+eval "$(direnv hook zsh)"
+
+. "$HOME/.cargo/env"
