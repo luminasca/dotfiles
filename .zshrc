@@ -1,3 +1,7 @@
+# 自動補完関数
+autoload -Uz compinit
+compinit
+
 #エイリアス
 alias ls='lsd'
 alias vim='nvim'
@@ -5,8 +9,14 @@ alias vim='nvim'
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
 
-# uv
-source $HOME/.cargo/env
+# direnv
+eval "$(direnv hook zsh)"
+
+# rustup & uv
+. "$HOME/.cargo/env"
+
+# sheldon
+eval "$(sheldon source)"
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -91,8 +101,30 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^]' ghq-fzf
 
+# cdr自体の設定
+if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+    add-zsh-hook chpwd chpwd_recent_dirs
+    zstyle ':completion:*' recent-dirs-insert both
+    zstyle ':chpwd:*' recent-dirs-default true
+    zstyle ':chpwd:*' recent-dirs-max 1000
+fi
+
+# fzf cdr
+function fzf-cdr() {
+    local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf --reverse)
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N fzf-cdr
+setopt noflowcontrol
+bindkey '^q' fzf-cdr
+
 # fzf.zshの設定
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # rangerの設定（サブシェルのネストを防止する）
 function ranger() {
@@ -111,48 +143,7 @@ zle -N bracketed-paste bracketed-paste-magic
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-## コマンド補完
-zinit ice wait'0'; zinit light zsh-users/zsh-completions
-autoload -Uz compinit && compinit
 ## 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## 補完候補を一覧表示したとき、Tabや矢印で選択できるようにする
 zstyle ':completion:*:default' menu select=1
-
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light b4b4r07/enhancd
-zinit light momo-lab/zsh-abbrev-alias
-zinit light zsh-users/zsh-history-substring-search
-
-# Load pure theme
-zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
-zinit light sindresorhus/pure
-
-# direnv
-eval "$(direnv hook zsh)"
-
-. "$HOME/.cargo/env"
