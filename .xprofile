@@ -20,8 +20,14 @@ export LIBSEAT_BACKEND=logind
 export GDK_DPI_SCALE=1
 export QT_SCALE_FACTOR=1
 
+# fcitx5の設定
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 # 私の環境では以下の設定がないと外部モニタの検出ができなかった
 export WLR_DRM_NO_MODIFIERS=1
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 
 # sway を起動する前に5秒 sleep
 sleep 1
