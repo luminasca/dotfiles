@@ -75,6 +75,7 @@ window#waybar.hidden {
 
 #battery,
 #cpu,
+#disk,
 #memory,
 #temperature,
 #backlight,
@@ -138,6 +139,10 @@ label:focus {
 
 #memory {
     color: #86e2d5;
+}
+
+#disk {
+    color: #d8bfd8
 }
 
 #backlight {
