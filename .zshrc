@@ -202,3 +202,13 @@ zle -N self-insert url-quote-magic
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## 補完候補を一覧表示したとき、Tabや矢印で選択できるようにする
 zstyle ':completion:*:default' menu select=1
+
+# yaziの設定
+function ya() {
+	tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
