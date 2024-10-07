@@ -89,7 +89,7 @@ output * bg ~/Pictures/wall1.png fill
     font pango KosugiMaru 12
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
@@ -237,19 +237,20 @@ input * {
 }
 
 # Moniter posision
-output HDMI-A-2 pos 0,0 res 1920x1080
-output DP-1 pos 1920,0 res 1920x1080
+output HDMI-A-2 pos 0 0 res 1920x1080
+output DP-2 pos 1920 0 res 1920x1080
+output DP-1 pos 3840 0 res 1920x1080
 
 # allow floating applications
 for_window [app_id="nemo"] {
    floating enable
 }
 
-for_window [app_id="eog"] {
+for_window [app_id="eom"] {
    floating enable
 }
 
-for_window [app_id="xed"] {
+for_window [app_id="pluma"] {
    floating enable
 }
 
@@ -257,7 +258,7 @@ for_window [app_id="qtbittorrent"] {
     floating enable
 }
 
-for_window [class="vlc"] {
+for_window [app_id="mpv"] {
     floating enable
 }
 
@@ -279,7 +280,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # windows
-default_border pixel 3
+default_border pixel 5
 client.focused #4c566a #2e3440 #d8dee9 #4c566a #4c566a
 client.unfocused #000000 #000000 #4c566a #000000 #000000
 client.urgent #b48ead #2e3440 #d8dee9 #a3be8c #b48ead
