@@ -12,6 +12,11 @@ return {
       mods = 'CTRL|SUPER',
       action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
     },
+    {
+        key = '[',
+        mods = 'CTRL',
+        action = wezterm.action.PaneSelect
+    },
   },
   font = wezterm.font("HackGen35 Console NF", {weight = "Regular"}), -- 自分の好きなフォントいれる
   use_ime = true, -- wezは日本人じゃないのでこれがないとIME動かない
