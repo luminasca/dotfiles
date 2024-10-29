@@ -20,7 +20,7 @@ shell = "zsh"
 # github = "chriskempson/base16-shell"
     [plugins.zsh-syntax-highlighting]
     github = "zsh-users/zsh-syntax-highlighting"
-    
+
     [plugins.zsh-autosuggestions]
     github = "zsh-users/zsh-autosuggestions"
 
@@ -38,6 +38,3 @@ shell = "zsh"
 
     [plugins.zsh-async]
     github = "mafredri/zsh-async"
-
-    [plugins.pure]
-    github = "sindresorhus/pure"
