@@ -3,8 +3,7 @@ autoload -Uz compinit
 compinit
 
 #エイリアス
-alias ls='lsd'
-alias vim='nvim'
+alias ls='eza -T'
 
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
@@ -21,9 +20,6 @@ eval "$(sheldon source)"
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
-
-# 色の変更
-zstyle :prompt:pure:path color green
 
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -125,7 +121,7 @@ bindkey '^q' fzf-cdr
 
 # fzf
 export FZF_COMPLETION_TRIGGER=','
-typeset -Tgx FZF_DEFAULT_OPTS fzf_default_opts " " 
+typeset -Tgx FZF_DEFAULT_OPTS fzf_default_opts " "
 fzf_default_opts=(
   '--height=90%'
   '--reverse'
@@ -154,7 +150,7 @@ fzf_default_opts=(
   )
 
   for x in "${(k)color_map[@]}"; do
-    fzf_color_opts+=("${x}:${color_map[${x}]}") 
+    fzf_color_opts+=("${x}:${color_map[${x}]}")
   done
   fzf_default_opts+=( '--color="'"${(j.,.)fzf_color_opts}"'"' )
 }
@@ -203,12 +199,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## 補完候補を一覧表示したとき、Tabや矢印で選択できるようにする
 zstyle ':completion:*:default' menu select=1
 
-# yaziの設定
-function ya() {
-	tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+eval "$(starship init zsh)"
