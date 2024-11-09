@@ -3,7 +3,7 @@ autoload -Uz compinit
 compinit
 
 #エイリアス
-alias ls='eza -T'
+alias ls='lsd'
 
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
