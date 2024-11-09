@@ -1,11 +1,14 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["wlr/taskbar"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "tray"],
     "tray": {
         "icon-size": 32,
         "spacing": 10
+    },
+    "wlr/taskbar" : {
+      "on-click": "minimize-raise"
     },
     "clock": {
         //  "timezone": "America/New_York",
