@@ -24,7 +24,7 @@ set $menu wofi -G --show drun | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/wall1.png fill
+output * bg ~/Pictures/DSC_0109.JPG fill
 #
 # Example configuration:
 #
@@ -71,6 +71,9 @@ output * bg ~/Pictures/wall1.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # open nemo
+    bindsym $mod+n exec nemo
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -212,6 +215,7 @@ bindsym $mod+r mode "resize"
 # start applications
 exec swaync
 exec fcitx5 -d
+exec blueman-applet
 exec gammastep
 
 # start blueman
@@ -230,7 +234,7 @@ bar {
 
 # change keyboad layout
 input * {
-    xkb_layout "jp"
+    xkb_layout "us"
     xkb_variant "colemak,,typewriter"
     xkb_options "grp:win_space_toggle"
 
@@ -266,6 +270,10 @@ for_window [app_id="evince"] {
     floating enable
 }
 
+for_window [app_id="desmue"] {
+    floating_enable
+}
+
 # backlight
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -281,7 +289,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # windows
 default_border pixel 5
-client.focused #4c566a #2e3440 #d8dee9 #4c566a #4c566a
+client.focused #03fc84 #03fc84 #d8dee9 #03fc84 #03fc84
 client.unfocused #000000 #000000 #4c566a #000000 #000000
 client.urgent #b48ead #2e3440 #d8dee9 #a3be8c #b48ead
 
