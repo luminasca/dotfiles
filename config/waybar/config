@@ -1,20 +1,18 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["wlr/taskbar"],
+    "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "tray"],
     "tray": {
         "icon-size": 32,
         "spacing": 10
     },
-    "wlr/taskbar" : {
-      "on-click": "minimize-raise"
+    "sway/window": {
+        "format": "{title}"
     },
     "clock": {
-        //  "timezone": "America/New_York",
         "interval": 1,
-        // "format": "{:%H:%M:%S}",
-        "format": "{:%H:%M:%S}",
+        "format": "{:%I:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -22,10 +20,11 @@
         "format": " {usage}%"
     },
     "memory": {
-        "format": " {}%"
+        "format": " {used}GiB/{avail}GiB"
     },
     "disk": {
-        "format": " {}%"
+        "interval": 1,
+        "format": " {used}/{total}"
     },
     "backlight": {
         //"device": "intel_backlight",
@@ -44,9 +43,9 @@
         //"format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp3s0", // (Optional) To force the use of this interface
+        "interval": 1,
         "format-wifi": " {signalStrength}%",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
+        "format-ethernet": "{ifname}",
         "format-disconnected": "⚠"
     },
     "pulseaudio": {
