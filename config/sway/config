@@ -24,7 +24,7 @@ set $menu wofi -G --show drun | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/DSC_0109.JPG fill
+output * bg ~/Pictures/wall1.png fill
 #
 # Example configuration:
 #
@@ -92,7 +92,7 @@ output * bg ~/Pictures/DSC_0109.JPG fill
     font pango KosugiMaru 12
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec wlogout
+    bindsym $mod+Shift+e exec nwg-bar
 #
 # Moving around:
 #
@@ -144,12 +144,6 @@ output * bg ~/Pictures/DSC_0109.JPG fill
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-
-exec_always ~/.config/sway/import-gsettings.sh \
-            gtk-theme:gtk-theme-name \
-            icon-theme:gtk-icon-theme-name \
-            cursor-theme:gtk-cursor-theme-name
-
 #
 # Layout stuff:
 #
@@ -234,16 +228,10 @@ bar {
 
 # change keyboad layout
 input * {
-    xkb_layout "us"
-    xkb_variant "colemak,,typewriter"
+    xkb_layout "jp"
     xkb_options "grp:win_space_toggle"
 
 }
-
-# Moniter posision
-output HDMI-A-2 pos 0 0 res 1920x1080
-output DP-2 pos 1920 0 res 1920x1080
-output DP-1 pos 3840 0 res 1920x1080
 
 # allow floating applications
 for_window [app_id="nemo"] {
@@ -258,7 +246,7 @@ for_window [app_id="pluma"] {
    floating enable
 }
 
-for_window [app_id="qtbittorrent"] {
+for_window [app_id="transmission-gtk"] {
     floating enable
 }
 
@@ -268,10 +256,6 @@ for_window [app_id="mpv"] {
 
 for_window [app_id="evince"] {
     floating enable
-}
-
-for_window [app_id="desmue"] {
-    floating_enable
 }
 
 # backlight
@@ -288,9 +272,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # windows
-default_border pixel 5
+default_border pixel 3
 client.focused #03fc84 #03fc84 #d8dee9 #03fc84 #03fc84
 client.unfocused #000000 #000000 #4c566a #000000 #000000
 client.urgent #b48ead #2e3440 #d8dee9 #a3be8c #b48ead
 
 include /etc/sway/config.d/*
+include $HOME/.config/sway/outputs
