@@ -1,5 +1,4 @@
 vim.opt.clipboard = "unnamedplus"
-vim.opt.whichwrap = "b,s,[,],<,>"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.ambiwidth = "single"
 vim.opt.wildmenu = true
@@ -9,7 +8,7 @@ vim.opt.showcmd = true
 vim.opt.hlsearch = true
 vim.opt.hidden = true
 vim.opt.backup = false
-vim.opt.swapfile = false
+vim.opt.guicursor = ""
 vim.opt.winblend = 20
 vim.opt.pumblend = 20
 vim.opt.termguicolors = true
@@ -20,7 +19,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.ruler = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.nrformats = "bin,hex"
 vim.opt.swapfile = false
 vim.opt.formatoptions:remove('t')
