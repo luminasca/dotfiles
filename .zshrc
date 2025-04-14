@@ -4,6 +4,7 @@ compinit
 
 #エイリアス
 alias ls='lsd'
+alias vi='nvim'
 
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
@@ -11,8 +12,8 @@ export PATH=/home/con/.nimble/bin:$PATH
 # direnv
 eval "$(direnv hook zsh)"
 
-# rustup & uv
-. "$HOME/.cargo/env"
+# uv
+source $HOME/.local/bin/env
 
 # sheldon
 eval "$(sheldon source)"
@@ -200,3 +201,32 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' menu select=1
 
 eval "$(starship init zsh)"
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# tmux
+if [[ ! -n $TMUX && $- == *l* ]]; then
+  # get the IDs
+  ID="`tmux list-sessions`"
+  if [[ -z "$ID" ]]; then
+    tmux new-session
+  fi
+  create_new_session="Create New Session"
+  ID="$ID\n${create_new_session}:"
+  ID="`echo $ID | $PERCOL | cut -d: -f1`"
+  if [[ "$ID" = "${create_new_session}" ]]; then
+    tmux new-session
+  elif [[ -n "$ID" ]]; then
+    tmux attach-session -t "$ID"
+  else
+    :  # Start terminal normally
+  fi
+fi
