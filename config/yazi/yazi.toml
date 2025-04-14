@@ -9,7 +9,7 @@ sort_sensitive = false
 sort_reverse   = false
 sort_dir_first = false
 linemode       = "none"
-show_hidden    = false
+show_hidden    = true
 show_symlink   = true
 scrolloff      = 5
 
@@ -129,7 +129,7 @@ cd_origin = "top-center"
 cd_offset = [ 0, 2, 50, 3 ]
 
 # create
-create_title  = "Create:"
+create_title  = [ "Create:", "Create (dir):" ]
 create_origin = "top-center"
 create_offset = [ 0, 2, 50, 3 ]
 
