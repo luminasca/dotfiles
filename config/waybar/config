@@ -22,11 +22,11 @@
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     },
     "memory": {
-        "format": " {used}GiB/{avail}GiB/used:{percentage}%"
+        "format": " used:{percentage}%"
     },
     "disk": {
         "interval": 1,
-        "format": " {used}/{total}/free:{percentage_free}%"
+        "format": " free:{percentage_free}%"
     },
     "backlight": {
         //"device": "intel_backlight",
