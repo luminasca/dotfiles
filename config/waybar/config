@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "tray"],
+    "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
         "icon-size": 32,
         "spacing": 10
@@ -19,7 +19,16 @@
     "cpu": {
         "interval": 1,
         "format": "  {icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-icons": [
+          "<span color='#69ff94'>▁</span>", // green
+          "<span color='#2aa9ff'>▂</span>", // blue
+          "<span color='#f8f8f2'>▃</span>", // white
+          "<span color='#f8f8f2'>▄</span>", // white
+          "<span color='#ffffa5'>▅</span>", // yellow
+          "<span color='#ffffa5'>▆</span>", // yellow
+          "<span color='#ff9977'>▇</span>", // orange
+          "<span color='#dd532e'>█</span>"  // red
+        ],
     },
     "memory": {
         "format": " used:{percentage}%"
@@ -29,20 +38,18 @@
         "format": " free:{percentage_free}%"
     },
     "backlight": {
-        //"device": "intel_backlight",
         "format": "{percent}%",
         "format-icons": ["", ""]
     },
     "battery": {
-        //"states": {
-        //    // "good": 95,
-        //    "warning": 30,
-        //    "critical": 15
-        //},
-        "format": " {capacity}%"
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        //"format-icons": ["", "", "", "", ""]
+        "interval": 60,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "interval": 1,
