@@ -24,7 +24,7 @@ set $menu wofi -G --show drun | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/wall1.png fill
+output * bg ~/Pictures/wall01.jpg fill
 #
 # Example configuration:
 #
@@ -92,7 +92,7 @@ output * bg ~/Pictures/wall1.png fill
     font pango KosugiMaru 12
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec nwg-bar
+    bindsym $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
@@ -208,7 +208,7 @@ bindsym $mod+r mode "resize"
 
 # start applications
 exec swaync
-exec fcitx5 -d
+exec fcitx5
 exec blueman-applet
 exec gammastep
 
@@ -228,6 +228,7 @@ bar {
 
 # change keyboad layout
 input * {
+    xkb_model "jp106"
     xkb_layout "jp"
     xkb_options "grp:win_space_toggle"
 
@@ -238,7 +239,7 @@ for_window [app_id="nemo"] {
    floating enable
 }
 
-for_window [app_id="eom"] {
+for_window [app_id="eog"] {
    floating enable
 }
 
@@ -258,6 +259,10 @@ for_window [app_id="evince"] {
     floating enable
 }
 
+for_window [app_id="qtgain"] {
+    floating enable
+}
+
 # backlight
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -273,8 +278,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # windows
 default_border pixel 3
-client.focused #03fc84 #03fc84 #d8dee9 #03fc84 #03fc84
-client.unfocused #000000 #000000 #4c566a #000000 #000000
+client.focused #87cefa #87cefa #87cefa #87cefa
+client.unfocused #000000 #000000 #000000 #000000
 client.urgent #b48ead #2e3440 #d8dee9 #a3be8c #b48ead
 
 include /etc/sway/config.d/*
