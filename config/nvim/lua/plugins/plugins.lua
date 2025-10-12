@@ -1,5 +1,5 @@
 return {
-   'mfussenegger/nvim-dap-python',
+    'mfussenegger/nvim-dap-python',
     'mfussenegger/nvim-dap',
     'nvim-neotest/nvim-nio',
     'rcarriga/nvim-dap-ui',
@@ -16,12 +16,6 @@ return {
             require('lualine').setup()
         end
     },
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-vsnip',
     'nvim-treesitter/nvim-treesitter',
     'yioneko/nvim-yati',
     'haringsrob/nvim_context_vt',
@@ -35,5 +29,17 @@ return {
         config = function()
             require("lsp_lines").setup()
         end
+    },
+    {
+        'Shougo/ddc.vim',
+        dependencies = {
+            'vim-denops/denops.vim',
+            'Shougo/ddc-ui-native',
+            'Shougo/ddc-source-around',
+            'Shougo/ddc-source-lsp',
+            'tani/ddc-fuzzy',
+            'Shougo/ddc-filter-matcher_head',
+            'Shougo/ddc-filter-sorter_rank',
+        }
     }
 }
