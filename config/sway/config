@@ -219,11 +219,6 @@ for_window [app_id="blueman-manager"] {
     floating enable
 }
 
-#discord
-for_window [app_id="discord"] {
-    floating_enable
-}
-
 #
 # Status Bar:
 #
@@ -246,10 +241,6 @@ for_window [app_id="nemo"] {
 }
 
 for_window [app_id="eog"] {
-   floating enable
-}
-
-for_window [app_id="xed"] {
    floating enable
 }
 
