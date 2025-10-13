@@ -210,12 +210,18 @@ bindsym $mod+r mode "resize"
 exec swaync
 exec fcitx5
 exec blueman-applet
-exec gammastep
+exec gammaste
+exec discord
 
 # start blueman
 exec blueman-applet
 for_window [app_id="blueman-manager"] {
     floating enable
+}
+
+#discord
+for_window [app_id="discord"] {
+    floating_enable
 }
 
 #
@@ -243,7 +249,7 @@ for_window [app_id="eog"] {
    floating enable
 }
 
-for_window [app_id="pluma"] {
+for_window [app_id="xed"] {
    floating enable
 }
 
@@ -251,7 +257,7 @@ for_window [app_id="transmission-gtk"] {
     floating enable
 }
 
-for_window [app_id="mpv"] {
+for_window [app_id="vlc"] {
     floating enable
 }
 
