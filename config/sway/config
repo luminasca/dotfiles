@@ -75,6 +75,9 @@ output * bg ~/Pictures/wall01.jpg fill
     # open nemo
     bindsym $mod+n exec nemo
 
+    # open xed
+    bindsym $mod+x exec xed
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -210,8 +213,7 @@ bindsym $mod+r mode "resize"
 exec swaync
 exec fcitx5
 exec blueman-applet
-exec gammaste
-exec discord
+exec gammastep
 
 # start blueman
 exec blueman-applet
@@ -257,6 +259,10 @@ for_window [app_id="evince"] {
 }
 
 for_window [app_id="qtgain"] {
+    floating enable
+}
+
+for_window [app_id="soundconverter"] {
     floating enable
 }
 
