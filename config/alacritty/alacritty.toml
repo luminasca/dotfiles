@@ -1,4 +1,4 @@
-import = [
+general.import = [
     "~/.config/alacritty/themes/themes/nord.toml"
 ]
 
@@ -23,11 +23,6 @@ style = "Italic"
 [font.normal]
 family = "HackGen35 Console NF"
 style = "Regular"
-
-[shell]
-# args = ["-l", "-c", 'tmux a -t default || tmux new -s default\; source ~/.config/tmux/default.session.conf']
-args = ["-l"]
-program = "/bin/zsh"
 
 [window]
 opacity = 0.8
