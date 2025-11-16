@@ -12,9 +12,6 @@ export PATH=/home/con/.nimble/bin:$PATH
 # direnv
 eval "$(direnv hook zsh)"
 
-# uv
-source $HOME/.local/bin/env
-
 # sheldon
 eval "$(sheldon source)"
 
