@@ -20,6 +20,7 @@
 	"status-icons": {
 		"paused": "⏸"
 	},
+    "interval": 1,
     },
     "clock": {
         "interval": 1,
