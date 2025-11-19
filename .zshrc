@@ -3,7 +3,7 @@ autoload -Uz compinit
 compinit
 
 #エイリアス
-alias ls='lsd'
+alias ls='lsd -a'
 alias vi='nvim'
 
 # Nim
