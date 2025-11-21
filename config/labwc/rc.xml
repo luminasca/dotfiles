@@ -29,10 +29,13 @@
       <action name="Reconfigure" />
     </keybind>
     <keybind key="W-w">
-      <action name="Execute" command="firefox" />
+      <action name="Execute" command="chromium" />
     </keybind>
-    <keybind key="W-N">
+    <keybind key="W-n">
       <action name="Execute" command="nemo" />
+    </keybind>
+    <keybind key="W-x">
+        <action name="Execute" command="xed" />
     </keybind>
     <keybind key="W-R">
       <action name="Resize" />

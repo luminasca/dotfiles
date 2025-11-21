@@ -1,7 +1,7 @@
 # Example autostart file
 
 # Set background color.
-swaybg -i '/home/con/Pictures/DSC_0109.JPG' -m fill >/dev/null 2>&1 &
+swaybg -i $HOME/Pictures/wall01.jpg &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
@@ -18,7 +18,7 @@ waybar >/dev/null 2>&1 &
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
 # as mako to function correctly. Thunderbird is an example of this.
-mako >/dev/null 2>&1 &
+swaync >/dev/null 2>&1 &
 
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 #
