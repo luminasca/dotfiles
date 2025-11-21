@@ -7,7 +7,12 @@
         "icon-size": 32,
         "spacing": 10
     },
-    "sway/window": {
+    "niri/wokspaces": {
+        "format": "{name}",
+        "sort-by-number": true,
+        "on-click": "activate",
+    },
+    "niri/window": {
         "format": "{title}"
     },
     "mpris": {
