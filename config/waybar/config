@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["sway/workspaces", "sway/window", "mpris"],
+    "modules-left": ["niri/workspaces", "niri/window", "mpris"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
@@ -12,10 +12,10 @@
     },
     "mpris": {
 	"format": "{player_icon} {dynamic}",
-	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+	"format-paused": "{status_icon} <i>{dynamic}</i>",
 	"player-icons": {
 		"default": "▶",
-		"mpd": "▶",
+		"cmus": "▶",
 	},
 	"status-icons": {
 		"paused": "⏸"
