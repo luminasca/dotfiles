@@ -1,0 +1,58 @@
+hotkey-overlay {
+	skip-at-startup
+}
+input {
+	keyboard {
+		track-layout "global"
+		repeat-delay 500
+		repeat-rate 40
+		xkb {
+			options "caps:escape_shifted_capslock"
+		}
+	}
+	touchpad {
+		tap
+		// dwt
+		natural-scroll
+		accel-speed 0.5
+		accel-profile "adaptive"
+		scroll-factor 1.2
+		scroll-method "two-finger"
+		tap-button-map "left-right-middle"
+		click-method "clickfinger"
+		// disabled-on-external-mouse
+		// middle-emulation
+	}
+	mouse {
+		natural-scroll
+		accel-speed 0.5
+		accel-profile "adaptive"
+		scroll-factor 1.0
+		scroll-method "no-scroll"
+	}
+}
+
+environment {
+    GTK_USE_PORTAL "0"
+    GDK_DEBUG "no-portals"
+}
+
+animations {
+	off
+}
+output "HDMI-A-1" {
+	mode "1920x1080"
+	scale 1.0
+	transform "normal"
+	position x=0 y=0
+	variable-refresh-rate on-demand=false
+	background-color "#191b2b"
+}
+
+binds {
+}
+
+layout {
+}
+
+spawn-at-startup "sh" "-c" "regreet --config /etc/greetd/regreet.toml; niri msg action quit --skip-confirmation"
