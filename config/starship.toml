@@ -96,8 +96,8 @@ style = "fg:#303030 bg:#B2B2FF"
 format = '[](fg:#B2B2FF)[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#B2B2FF"
-format = '[$all_status$ahead_behind ]($style)[](bg:#B2B2FF fg:#303030 fg:#444444)'
+style = "fg:#FF0000 bg:#B2B2FF"
+format = '[$all_status$ahead_behind ]($style)[](bg:#B2B2FF fg:#B2B2FF fg:#303030)'
 
 [golang]
 symbol = " "
