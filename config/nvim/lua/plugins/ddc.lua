@@ -3,7 +3,7 @@ vim.lsp.config('*', {
 })
 
 vim.fn["ddc#custom#patch_global"]('ui', 'native')
-vim.fn["ddc#custom#patch_global"]('sources', {'lsp', 'around'})
+vim.fn["ddc#custom#patch_global"]('sources', {'lsp', 'around', 'file'})
 vim.fn["ddc#custom#patch_global"]('sourceOptions', {
   ['lsp'] = {
     mark = "[LSP]",
@@ -15,6 +15,11 @@ vim.fn["ddc#custom#patch_global"]('sourceOptions', {
     ignoreCase = true,
     minAutoCompleteLength = 2,
     mark = '[A]',
+  },
+  ['file'] = {
+    mark = "[File]",
+    isVolatile = true,
+    forceCompletionPattern = {'\bS/\bS*'},
   },
 })
 vim.fn["ddc#enable"]()

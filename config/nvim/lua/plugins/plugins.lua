@@ -40,6 +40,7 @@ return {
             'tani/ddc-fuzzy',
             'Shougo/ddc-filter-matcher_head',
             'Shougo/ddc-filter-sorter_rank',
+            'LumaKernel/ddc-source-file',
         }
     }
 }
