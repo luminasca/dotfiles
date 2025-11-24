@@ -13,6 +13,9 @@
     <font name="Kosugi Maru" size="12" />
   </theme>
 
+  <desktops number="4">
+  </desktops>
+
   <keyboard>
     <default />
     <!-- Use a different terminal emulator -->
@@ -28,14 +31,17 @@
     <keybind key="W-S-r">
       <action name="Reconfigure" />
     </keybind>
+    <keybind key="W-S-q">
+      <action name="Close" />
+    </keybind>
     <keybind key="W-w">
-      <action name="Execute" command="chromium" />
+      <action name="Execute" command="firefox" />
     </keybind>
     <keybind key="W-n">
       <action name="Execute" command="nemo" />
     </keybind>
     <keybind key="W-x">
-        <action name="Execute" command="xed" />
+      <action name="Execute" command="xed" />
     </keybind>
     <keybind key="W-R">
       <action name="Resize" />
@@ -71,10 +77,22 @@
     <keybind key="W-F4">
       <action name="None" />
     </keybind>
-    <keybind key="W-1"> <action name="GoToDesktop" to="1" />  </keybind>
-    <keybind key="W-2"> <action name="GoToDesktop" to="2" />  </keybind>
-    <keybind key="W-3"> <action name="GoToDesktop" to="3" /> </keybind>
-    <keybind key="W-4"> <action name="GoToDesktop" to="4" /> </keybind>
+
+    <keybind key="C-A-1">
+      <action name="GoToDesktop" to="1" />
+    </keybind>
+
+    <keybind key="C-A-2">
+      <action name="GoToDesktop" to="2" />
+    </keybind>
+
+    <keybind key="C-A-3">
+      <action name="GoToDesktop" to="3" />
+    </keybind>
+
+    <keybind key="C-A-4">
+      <action name="GoToDesktop" to="4" />
+    </keybind>
   </keyboard>
 
   <mouse>
