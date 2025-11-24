@@ -38,3 +38,6 @@ shell = "zsh"
 
     [plugins.zsh-async]
     github = "mafredri/zsh-async"
+
+    [plugins.powerlevel10k]
+    github = "romkatv/powerlevel10k"
