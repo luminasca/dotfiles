@@ -63,6 +63,31 @@ window#waybar.hidden {
     color: red;
 }
 
+#taskbar button {
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    background-color: transparent;
+    color: #FFFFFF;
+    min-width: 36px;
+}
+
+#taskbar button.active {
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    background-color: #ddddff;
+    color: #303030;
+    min-width: 36px;
+
+}
+
+#mpris button {
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    background-color: transparent;
+    color: #FFFFFF;
+    min-width: 36px;
+}
+
 #mode {
     background-color: #64727D;
     border-bottom: 1px solid #ffffff;

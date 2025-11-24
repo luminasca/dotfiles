@@ -1,31 +1,42 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["niri/workspaces", "niri/window", "mpris"],
+    "modules-left": ["wlr/taskbar", "mpris"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
         "icon-size": 32,
         "spacing": 10
     },
-    "niri/wokspaces": {
-        "format": "{name}",
+    "niri/workspaces": {
+        "format": "{icon}",
         "sort-by-number": true,
         "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+        },
     },
     "niri/window": {
         "format": "{title}"
     },
+    "wlr/taskbar": {
+        "format": "{app_id}",
+        "on-click": "minimize-raise",
+    },
     "mpris": {
-	"format": "{player_icon} {dynamic}",
-	"format-paused": "{status_icon} <i>{dynamic}</i>",
-	"player-icons": {
-		"default": "▶",
-		"cmus": "▶",
-	},
-	"status-icons": {
-		"paused": "⏸"
-	},
-    "interval": 1,
+	    "format": "{player_icon} {dynamic}",
+	    "format-paused": "{status_icon} <i>{dynamic}</i>",
+	    "player-icons": {
+		    "default": "▶",
+		    "ncmpcpp": "▶",
+	    },
+	    "status-icons": {
+		    "paused": "⏸"
+	    },
+        "interval": 1,
+        "dynamic-order": ["title", "artist"]
     },
     "clock": {
         "interval": 1,
