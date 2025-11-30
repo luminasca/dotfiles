@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = vim.lsp.config
 lspconfig.nimlsp.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
