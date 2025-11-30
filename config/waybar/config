@@ -1,24 +1,35 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["wlr/taskbar", "mpris"],
+    "modules-left": ["ext/workspaces", "wlr/taskbar", "mpris"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
         "icon-size": 32,
         "spacing": 10
     },
-    "niri/workspaces": {
-        "format": "{icon}",
+    "sway/workspaces": {
+        "format": "{name}",
         "sort-by-number": true,
         "on-click": "activate",
-        "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-        },
     },
-    "niri/window": {
+    "ext/workspaces": {
+	    "format": "{icon}",
+	    "on-click": "activate",
+	    "format-icons": {
+		    "Workspace 1": "1",
+		    "Workspace 2": "2",
+		    "Workspace 3": "3",
+		    "Workspace 4": "4",
+	        "Workspace 5": "5",
+		    "Workspace 6": "6",
+		    "Workspace 7": "7",
+		    "Workspace 8": "8",
+            "Workspace 9": "9",
+            "Workspace 10": "10",
+        },
+	    "sort-by-id": true
+    },
+    "sway/window": {
         "format": "{title}"
     },
     "wlr/taskbar": {
@@ -35,7 +46,6 @@
 	    "status-icons": {
 		    "paused": "⏸"
 	    },
-        "interval": 1,
         "dynamic-order": ["title", "artist"]
     },
     "clock": {
