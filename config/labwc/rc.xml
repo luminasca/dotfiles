@@ -13,7 +13,7 @@
     <font name="Kosugi Maru" size="12" />
   </theme>
 
-  <desktops number="4">
+  <desktops number="10">
   </desktops>
 
   <keyboard>
@@ -92,6 +92,28 @@
 
     <keybind key="C-A-4">
       <action name="GoToDesktop" to="4" />
+    </keybind>
+    <keybind key="C-A-5">
+      <action name="GoToDesktop" to="5" />
+    </keybind>
+
+    <keybind key="C-A-6">
+      <action name="GoToDesktop" to="6" />
+    </keybind>
+
+    <keybind key="C-A-7">
+      <action name="GoToDesktop" to="7" />
+    </keybind>
+
+    <keybind key="C-A-8">
+      <action name="GoToDesktop" to="8" />
+    </keybind>
+    <keybind key="C-A-9">
+      <action name="GoToDesktop" to="9" />
+    </keybind>
+
+    <keybind key="C-A-0">
+      <action name="GoToDesktop" to="10" />
     </keybind>
   </keyboard>
 

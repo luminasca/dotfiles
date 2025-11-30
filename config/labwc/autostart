@@ -1,7 +1,7 @@
 # Example autostart file
 
 # Set background color.
-swaybg -i $HOME/Pictures/wall01.jpg &
+swaybg -i $HOME/Pictures/wall02.jpg &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
@@ -36,3 +36,4 @@ swayidle -w \
 gammastep &
 fcitx5 &
 blueman-applet &
+mpd &
