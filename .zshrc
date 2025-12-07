@@ -1,4 +1,5 @@
 # 自動補完関数
+autoload -Uz add-zsh-hook
 autoload -Uz compinit
 compinit
 
@@ -9,6 +10,13 @@ alias vi='nvim'
 # Nim
 export PATH=/home/con/.nimble/bin:$PATH
 
+# rustup
+source $HOME/.cargo/bin
+
+# uv
+source $HOME/.local/bin/env
+eval "$(uv generate-shell-completion zsh)"
+
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -17,6 +25,9 @@ eval "$(sheldon source)"
 
 # starship
 eval "$(starship init zsh)"
+
+# sccache
+export RUSTC_WRAPPER=$(which sccache)
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -232,3 +243,5 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. "$HOME/.local/bin/env"
