@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["ext/workspaces", "wlr/taskbar", "mpris"],
+    "modules-left": ["mpris"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
