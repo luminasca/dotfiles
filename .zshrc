@@ -1,21 +1,13 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/luminasca/.zsh/completions:"* ]]; then export FPATH="/home/luminasca/.zsh/completions:$FPATH"; fi
 # 自動補完関数
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
 compinit
 
 # エイリアス
-alias ls='ls -a'
+alias ls='ls'
 alias vi='nvim'
-
-# Nim
-export PATH=/home/con/.nimble/bin:$PATH
-
-# rustup
-source $HOME/.cargo/bin
-
-# uv
-source $HOME/.local/bin/env
-eval "$(uv generate-shell-completion zsh)"
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -211,16 +203,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## 補完候補を一覧表示したとき、Tabや矢印で選択できるようにする
 zstyle ':completion:*:default' menu select=1
 
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
 # tmux
 if [[ ! -n $TMUX && $- == *l* ]]; then
   # get the IDs
@@ -239,9 +221,3 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     :  # Start terminal normally
   fi
 fi
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-. "$HOME/.local/bin/env"
