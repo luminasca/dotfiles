@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["mpris"],
+    "modules-left": ["niri/window"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
@@ -8,6 +8,11 @@
         "spacing": 10
     },
     "sway/workspaces": {
+        "format": "{name}",
+        "sort-by-number": true,
+        "on-click": "activate",
+    },
+    "niri/workspaces": {
         "format": "{name}",
         "sort-by-number": true,
         "on-click": "activate",
@@ -30,6 +35,9 @@
 	    "sort-by-id": true
     },
     "sway/window": {
+        "format": "{title}"
+    },
+    "niri/window": {
         "format": "{title}"
     },
     "wlr/taskbar": {
@@ -110,8 +118,8 @@
     },
     "network": {
         "interval": 1,
-        "format-wifi": " {signalStrength}%",
-        "format-ethernet": "{ifname}",
+        "format-wifi": " {signalStrength}%/{ipaddr}",
+        "format-ethernet": "{ifname}/{ipaddr}",
         "format-disconnected": "⚠"
     },
     "pulseaudio": {
