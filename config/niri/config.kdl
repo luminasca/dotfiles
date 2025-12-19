@@ -271,7 +271,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "gammastep"
 spawn-at-startup "fcitx"
-spawn-at-startup "swaybg" "-i" "/home/con/Pictures/wall01.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/con/Pictures/river50.jpg" "-m" "fill"
 spawn-at-startup "blueman"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -369,9 +369,10 @@ binds {
     Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn-sh "$HOME/.config/wofi/launch.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+X repeat=false hotkey-overlay-title="Open a Text Editor: xed" { spawn "xed"; }
+    Mod+X repeat=false hotkey-overlay-title="Open a Text Editor: gedit" { spawn "gedit"; }
     Mod+N repeat=false hotkey-overlay-title="Open a Folder: nemo" { spawn "nemo"; }
-    Mod+Shift+E hotkey-overlay-title="logout" { spawn "wlogout"; }
+    Mod+Shift+E repeat=false hotkey-overlay-title="logout" { spawn "wlogout"; }
+    Mod+W repeat=false hotkey-overlay-title="Open a Browzer: Firefox" {spawn "firefox";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -588,7 +589,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    // Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
