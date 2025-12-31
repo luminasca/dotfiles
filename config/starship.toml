@@ -23,8 +23,7 @@ $nodejs\
 $nim\
 $rust\
 $python
-[ % ](bg:#303030)\
-[](fg:#303030) 
+$character\
 """
 
 # Disable the blank line at the start of the prompt
@@ -123,7 +122,11 @@ format = '[](fg:#444444)[ $symbol ($version) ]($style)'
 symbol = " "
 style = "bg:#444444"
 format = '[](fg:#444444)[ $symbol ($version) ]($style)'
+
 [python]
 symbol = " "
 style = "bg:#444444"
 format = '[](fg:#444444)[ $symbol ($version) ]($style)'
+
+[character]
+success_symbol = "[❯](bold green)"
