@@ -24,7 +24,7 @@ set $menu wofi -G --show drun | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/wall02.jpg fill
+output * bg ~/Pictures/river50.jpg fill
 #
 # Example configuration:
 #
@@ -36,10 +36,10 @@ output * bg ~/Pictures/wall02.jpg fill
 #
 # Example configuration:
 #
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -76,7 +76,7 @@ exec swayidle -w \
     bindsym $mod+n exec nemo
 
     # open xed
-    bindsym $mod+x exec xed
+    bindsym $mod+x exec gedit
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -98,7 +98,7 @@ exec swayidle -w \
     bindsym $mod+Shift+e exec wlogout
 
     # Open firefox
-    bindsym $mod+w exec firefox
+    bindsym $mod+w exec google-chrome-stable
 #
 # Moving around:
 #
@@ -217,7 +217,6 @@ exec swaync
 exec fcitx5
 exec blueman-applet
 exec gammastep
-exec mpd
 
 # start blueman
 exec blueman-applet
@@ -235,8 +234,8 @@ bar {
 
 # change keyboad layout
 input * {
-    xkb_model "jp106"
-    xkb_layout "jp"
+    xkb_model "us"
+    xkb_layout "us"
     xkb_options "grp:win_space_toggle"
 
 }
@@ -254,7 +253,7 @@ for_window [app_id="transmission-gtk"] {
     floating enable
 }
 
-for_window [app_id="vlc"] {
+for_window [app_id="mpv"] {
     floating enable
 }
 
