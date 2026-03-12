@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["niri/window"],
+    "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
@@ -118,8 +118,8 @@
     },
     "network": {
         "interval": 1,
-        "format-wifi": " {signalStrength}%/{ipaddr}",
-        "format-ethernet": "{ifname}/{ipaddr}",
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "{ifname}",
         "format-disconnected": "⚠"
     },
     "pulseaudio": {
