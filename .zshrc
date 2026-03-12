@@ -1,13 +1,15 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/luminasca/.zsh/completions:"* ]]; then export FPATH="/home/luminasca/.zsh/completions:$FPATH"; fi
 # 自動補完関数
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
 compinit
 
 # エイリアス
-alias ls='ls'
+alias ls='lsd'
 alias vi='nvim'
+
+# PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -17,9 +19,6 @@ eval "$(sheldon source)"
 
 # starship
 eval "$(starship init zsh)"
-
-# sccache
-export RUSTC_WRAPPER=$(which sccache)
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -221,3 +220,5 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     :  # Start terminal normally
   fi
 fi
+
+. "/home/con/.deno/env"
