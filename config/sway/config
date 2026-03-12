@@ -284,7 +284,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # windows
 default_border pixel 3
-client.focused #87cefa #87cefa #87cefa #87cefa
+client.focused #00ff00 #00ff00 #00ff00 #00ff00
 client.unfocused #000000 #000000 #000000 #000000
 client.urgent #b48ead #2e3440 #d8dee9 #a3be8c #b48ead
 
