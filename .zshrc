@@ -4,7 +4,7 @@ autoload -Uz compinit
 compinit
 
 # エイリアス
-alias ls='lsd'
+alias ls='eza'
 alias vi='nvim'
 
 # PATH
@@ -221,4 +221,5 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
   fi
 fi
 
-. "/home/con/.deno/env"
+# mise
+eval "$(mise activate zsh)"
