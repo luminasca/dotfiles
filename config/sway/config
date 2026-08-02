@@ -19,7 +19,8 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi -G --show drun | xargs swaymsg exec --
+# set $menu wofi -G --show drun | xargs swaymsg exec --
+set $menu $HOME/.config/wofi/launch.sh
 
 ### Output configuration
 #
@@ -95,7 +96,7 @@ output * bg ~/Pictures/river50.jpg fill
     font pango KosugiMaru 12
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec wlogout
+    bindsym $mod+Shift+e exec $HOME/.config/wofi/sway-power.sh
 
     # Open firefox
     bindsym $mod+w exec google-chrome-stable
@@ -266,6 +267,10 @@ for_window [app_id="qtgain"] {
 }
 
 for_window [app_id="soundconverter"] {
+    floating enable
+}
+
+for_window [class="Tk"] {
     floating enable
 }
 
