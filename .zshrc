@@ -73,9 +73,6 @@ setopt extended_glob
 # ※ たとえば Ctrl-W でカーソル前の1単語を削除したとき / までで削除が止まる
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-# zの設定
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
 # fzfの設定
 export FZF_CTRL_T_COMMAND='rg --files --hidden --glob "!.git/*"'
 export FZF_CTRL_T_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}"'
