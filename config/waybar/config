@@ -1,6 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-left": ["niri/workspaces", "niri/window", "custom/cmus-prev", "custom/cmus-toggle", "custom/cmus-next"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "disk", "network", "pulseaudio", "battery", "backlight", "tray"],
     "tray": {
@@ -40,21 +40,20 @@
     "niri/window": {
         "format": "{title}"
     },
-    "wlr/taskbar": {
-        "format": "{app_id}",
-        "on-click": "minimize-raise",
+    "custom/cmus-prev": {
+        "format": "⏮",
+        "tooltip": false,
+        "on-click": "cmus-remote -r"
     },
-    "mpris": {
-	    "format": "{player_icon} {dynamic}",
-	    "format-paused": "{status_icon} <i>{dynamic}</i>",
-	    "player-icons": {
-		    "default": "▶",
-		    "ncmpcpp": "▶",
-	    },
-	    "status-icons": {
-		    "paused": "⏸"
-	    },
-        "dynamic-order": ["title", "artist"]
+    "custom/cmus-toggle": {
+        "format": "⏯",
+        "tooltip": false,
+        "on-click": "cmus-remote -u"
+    },
+    "custom/cmus-next": {
+        "format": "⏭",
+        "tooltip": false,
+        "on-click": "cmus-remote -n"
     },
     "clock": {
         "interval": 1,
